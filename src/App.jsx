@@ -6,6 +6,7 @@ import PortalHatal from "./components/PortalHatal";
 import Atz from "./components/Atz";
 import Mkeva from "./components/Mkeva";
 import HeadBar from "./components/headBar/headBar";
+import './App.css'
 
 function App() {
 

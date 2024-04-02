@@ -28,9 +28,6 @@ function Navbar() {
         <li className="bg-gray-200 w-full h-[140px] right-0 flex justify-start items-center border-b-4 border-black border-solid">
           <Link to='#' className=" pl-4 text-[30px] bg-none">
           </Link>
-          {/* <img src={hatal} alt="Hatal" className="h-8 w-8 ml-6" /> */}
-          <p dir="rtl" className="text-[20px] px-4"> מערכת לוגיסטיקה תקשובית</p>
-          {/* <img src={hatal} alt="Hatal" className="h-8 w-8 mr-4" /> */}
         </li>
         {
             menuItem.map((item, index)=>{
