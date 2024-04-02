@@ -8,15 +8,19 @@ function headBar() {
         setShownav(!showNav)
     }
   return (
-    <div dir='rtl' className='w-full flex flex-row bg-red-500'>
-        <div className=' flex'>
-            <HiMenu onClick={displayNav}/>
-            {/* {showNav && <Navbar/>} */}
+    <div dir='rtl' className=' sticky top-0 flex items-center justify-between bg-white/75 p-2 text-right shadow backdrop-blur'>
+        <div className='relative inline-block text-left'>
+            <div>
+                <HiMenu onClick={displayNav} className=' text-[25px]'/>
+                {showNav && <Navbar/>}
+            </div>
         </div>
-        <div className='text-center justify-center flex text-red-400'>
-            {/* <img src={hatal} alt="Hatal" className="h-8 w-8 ml-6" /> */}
-            <p dir="rtl" className="text-[20px] px-4"> מערכת לוגיסטיקה תקשובית</p>
-            {/* <img src={hatal} alt="Hatal" className="h-8 w-8 mr-4" /> */}
+        <div>
+            <h1 dir="rtl" className="secular-one text-xl">החטיבה התכנולוגית</h1>
+        </div>
+        <div className='flex'>
+            <img src='/'/>
+            <img src='/'/>
         </div>
     </div>
     
