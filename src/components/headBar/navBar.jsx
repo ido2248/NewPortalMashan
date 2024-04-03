@@ -21,7 +21,7 @@ function Navbar() {
   return (
    <>
     <nav className='w-full shadow-md bg-slate-100 '>
-      <ul className="flex place-items-center text-center justify-between pt-2 px-4 pb-1">
+      <ul className="flex  text-center justify-between items-center pt-2 px-4 pb-1">
         {menuItem.map((item, index)=>{
           const isActive = location.pathname === item.path;
           return (

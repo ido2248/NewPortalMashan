@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function PortalHatal() {
   return (
-    <div>PortalHatal</div>
+    <div className='text-center'>PortalHatal</div>
   )
 }

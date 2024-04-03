@@ -12,14 +12,14 @@ function headBar() {
         <div className=' flex items-center justify-between bg-white/75 p-2 shadow backdrop-blur'>
             <div className='relative inline-block text-left'>
                 <div>
-                    <img className='h-14 w-14' src='/img/Hatal_Inside.png'/>
+                    <img className='h-14 w-14' src='/img/Hatal.png'/>
                 </div>
             </div>
             <div>
                 <h1 dir="rtl" className="secular-one text-xl font-sans font-bold">החטיבה התכנולוגית</h1>
             </div>
             <div>
-                <img className='w-14 h-14' src='/img/Hatal.png'/>
+                <img className='w-14 h-14' src='/img/Hatal_Inside.png'/>
             </div>
         </div>
         <Navbar/>
