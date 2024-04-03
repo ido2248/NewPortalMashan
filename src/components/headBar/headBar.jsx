@@ -8,20 +8,21 @@ function headBar() {
         setShownav(!showNav)
     }
   return (
-    <div dir='rtl' className=' sticky top-0 flex items-center justify-between bg-white/75 p-2 text-right shadow backdrop-blur'>
-        <div className='relative inline-block text-left'>
+    <div dir='rtl' className='sticky top-0 text-right'>
+        <div className=' flex items-center justify-between bg-white/75 p-2 shadow backdrop-blur'>
+            <div className='relative inline-block text-left'>
+                <div>
+                    <img className='h-14 w-14' src='/img/Hatal_Inside.png'/>
+                </div>
+            </div>
             <div>
-                <HiMenu onClick={displayNav} className=' text-[25px]'/>
-                {showNav && <Navbar/>}
+                <h1 dir="rtl" className="secular-one text-xl font-sans font-bold">החטיבה התכנולוגית</h1>
+            </div>
+            <div>
+                <img className='w-14 h-14' src='/img/Hatal.png'/>
             </div>
         </div>
-        <div>
-            <h1 dir="rtl" className="secular-one text-xl">החטיבה התכנולוגית</h1>
-        </div>
-        <div className='flex'>
-            <img src='/'/>
-            <img src='/'/>
-        </div>
+        <Navbar/>
     </div>
     
   )
