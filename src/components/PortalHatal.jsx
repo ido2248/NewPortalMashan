@@ -21,7 +21,7 @@ export default function PortalHatal() {
           </div>
         </article>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-40 object-cover bg-gray-200' src='/img/sadir.jpg'/>
+          <img className=' mx-auto h-56 w-full object-cover rounded-t-xl bg-gray-200' src='/img/sadir.jpg'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>כל המידע שאתם צריכים בנוגע לחטל, זמני ארוחות, מספרי פאלאפון ועזרה ראשונה</p>
             <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' to='https://sadir.azurewebsites.net/'>סדיר</Link>
