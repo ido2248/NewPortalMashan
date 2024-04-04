@@ -16,7 +16,7 @@ function headBar() {
                 </div>
             </div>
             <div>
-                <h1 dir="rtl" className="secular-one text-xl font-sans font-bold">החטיבה התכנולוגית</h1>
+                <h1 dir="rtl" className="secular-one text-xl font-sans font-bold">החטיבה הטכנולוגית</h1>
             </div>
             <div>
                 <img className='w-14 h-14' src='/img/Hatal_Inside.png'/>

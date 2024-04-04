@@ -12,12 +12,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <HeadBar/>
-        <Routes>
-          <Route path="/" element={<PortalHatal/>}/>
-          <Route path="/Atz" element={<Atz/>}/>
-          <Route path="/Mkeva" element={<Mkeva/>}/>
-        </Routes>
+      <div className='bg-slate-100 flex flex-col min-h-screen'>
+        <HeadBar/>
+          <Routes>
+            <Route path="/" element={<PortalHatal/>}/>
+            <Route path="/Atz" element={<Atz/>}/>
+            <Route path="/Mkeva" element={<Mkeva/>}/>
+          </Routes>
+      </div>
     </BrowserRouter>
   )
 }
