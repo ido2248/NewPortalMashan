@@ -62,7 +62,7 @@ export default function PortalHatal() {
       <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
           <img className=' mx-auto h-56 w-full object-cover rounded-t-xl' src=''/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
+            <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
             <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> setIsPopupOpen(true)}>ת"ש</button>
             {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={file}/>}
           </div>
