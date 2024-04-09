@@ -5,6 +5,7 @@ import PopUpPdf from './PopUpPdf'
 
 export default function PortalHatal() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const file = '/pdf/tash1.pdf'
   return (
     <div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8'>
       <div>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
@@ -58,7 +59,7 @@ export default function PortalHatal() {
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
             <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> setIsPopupOpen(true)}>ת"ש</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)}/>}
+            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} props={file}/>}
           </div>
         </article>
       </section>
