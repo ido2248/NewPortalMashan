@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import { Document, Page } from 'react-pdf'
 
 const PopUpPdf = ({isOpen, onClose, props }) => {
@@ -18,13 +18,12 @@ const PopUpPdf = ({isOpen, onClose, props }) => {
     }
   }
   return (
-    <div className=' fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50' onClick={closepopup}>
+    <div className=' fixed inset-0 flex items-center justify-center z-50 bg-slate-800 bg-opacity-90' onClick={closepopup}>
         <div className='bg-white p-6 rounded shadow-lg'> 
-           <Document file={pdf} options={{ workerSrc:'/pdf.worker.jsx'}} onLoadSuccess={onDocumentLoadSuccess}>
-              {Array.from(new Array(numPages), (el, index)=>(
-                <Page key={`page_${index + 1}`} pageNumber={index + 1}/>
-              ))}
-           </Document>
+          <Document file='/pdf/tash1.pdf'>
+            <Page  pageNumber={2}></Page>
+          </Document>
+          <button onClick={onClose}></button>
         </div>
     </div>
   )
