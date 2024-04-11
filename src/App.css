@@ -1,14 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* .pdf-container {
-    padding: 0;
-    margin: 0;
-    width: 100%; Ensure the container takes up the full width
+/* global.css or app.css */
+.react-pdf_Page {
+    margin: 0 !important; /* Remove margin */
+    padding: 0 !important; /* Remove padding */
+    width: 100% !important; /* Ensure full width */
 }
-.pdf-viewer {
-    width: 100%; Adjust as needed
-}
-.pdf-container, .pdf-viewer {
-    max-width: 100%;
-   } */

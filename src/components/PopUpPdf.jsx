@@ -7,7 +7,7 @@ import PdfToolbar from '../utiles/PdfToolBar';
 const PopUpPdf = ({ isOpen, onClose, pdf }) => {
   
   const [numPages, setNumPages]= useState(null)
-  const [scale, setScale]= useState(0.48)
+  const [scale, setScale]= useState(0.52)
   const onDocumentLoadSuccess  = ({ numPages }) => {
     setNumPages(numPages)
   }  
@@ -23,7 +23,7 @@ const PopUpPdf = ({ isOpen, onClose, pdf }) => {
   }
   return (
     <div className=' fixed inset-0 flex items-center justify-center z-50 bg-slate-800/75' onClick={closepopup}>
-        <div className='bg-white rounded shadow-lg overflow-auto' style={{width:'80%', height:'80%'}}> 
+        <div className='bg-white rounded shadow-lg overflow-auto flex flex-col ' style={{width:'80%', height:'80%'}}> 
           <PdfToolbar scale={scale} setScale={setScale} />
           <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
             {Array.from(new Array(numPages), (el, index) => (
