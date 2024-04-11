@@ -19,7 +19,7 @@ const PdfToolbar = ({ scale, setScale }) => {
     <div className=" justify-center mb-4 p-4 sticky top-0 z-50 bg-gray-400/75 w-full text-black">
       <button onClick={zoomIn} className="p-2 text-xl"><FaPlus/></button>
       <button onClick={zoomOut} className="p-2 text-xl"><FaMinus/></button>
-      <button onClick={resetZoom}></button>
+      {/* <span className="ml-4">Page: {currentPage}</span> */}
     </div>
  );
 };

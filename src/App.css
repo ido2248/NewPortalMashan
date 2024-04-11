@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 /* global.css or app.css */
-.react-pdf_Page {
-    margin: 0 !important; /* Remove margin */
-    padding: 0 !important; /* Remove padding */
-    width: 100% !important; /* Ensure full width */
-}
+/* .react-pdf_Page {
+    margin: 0 !important; 
+    padding: 0 !important; 
+    width: 100% !important; 
+    
+} */
