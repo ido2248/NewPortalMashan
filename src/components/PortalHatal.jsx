@@ -1,16 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import PopUpPdf from './PopUpPdf'
-import { pdfjs } from 'react-pdf';
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
-  import.meta.url,
-).toString();
 
 export default function PortalHatal() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
-  const file = '/pdf/tash1.pdf'
+  const file = 'pdf/tash1.pdf'
   return (
     <div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8'>
       <div>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
