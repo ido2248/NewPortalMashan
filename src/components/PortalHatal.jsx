@@ -14,7 +14,7 @@ export default function PortalHatal() {
 
   return (
     <div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8'>
-      <div>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
+      <div className='font-bold pb-4 px-4'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
       <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4'>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
           <img className=' mx-auto h-40 object-cover bg-gray-200' src='/img/cadic.png'/>

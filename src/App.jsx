@@ -19,6 +19,7 @@ function App() {
             <Route path="/Atz" element={<Atz/>}/>
             <Route path="/Mkeva" element={<Mkeva/>}/>
           </Routes>
+          <footer dir='rtl' className=' text-center font-bold font-sans'>פותח ע״י מסגרת אמ״ת ©</footer>
       </div>
     </BrowserRouter>
   )
