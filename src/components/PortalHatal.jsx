@@ -16,6 +16,7 @@ export default function PortalHatal() {
     <div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8'>
       <div className='font-bold pb-4 px-4'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
       <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4'>
+        <h1 className='font-bold'>אפלקציות ואתרים שונים לשימושכם</h1>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
           <img className=' mx-auto h-40 object-cover bg-gray-200' src='/img/cadic.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
@@ -59,23 +60,24 @@ export default function PortalHatal() {
           </div>
         </article>
       </section>
-      <section className='grid grid-flow-row sm:grid-cols-1 gap-8'>
-          <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-            <img className=' mx-auto h-56 w-full object-cover rounded-t-xl' src='/img/course.jpg'/>
-            <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-              <p className='text-slate-300 p-2'>כל המידע הנדרש על הקורסים וגמולות ההשתלמות</p>
-              <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[1])}>קורסים וגמו"ש</button>
-              {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
-            </div>
-          </article>
-          <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-            <img className=' mx-auto h-56 w-full object-cover rounded-t-xl' src='/img/tash.jpg'/>
-            <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-              <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
-              <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[0])}>ת"ש</button>
-              {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
-            </div>
-          </article>
+      <section className='grid grid-flow-row sm:grid-cols-1 gap-8 pt-8'>
+        <h1 className='font-bold'>קבצים שימושיים</h1>
+        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
+          <img className=' mx-auto h-56 w-full object-cover rounded-t-xl' src='/img/course.jpg'/>
+          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
+          <p className='text-slate-300 p-2'>כל המידע הנדרש על הקורסים וגמולות ההשתלמות</p>
+            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[1])}>קורסים וגמו"ש</button>
+            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+          </div>
+        </article>
+        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
+          <img className=' mx-auto h-56 w-full object-cover rounded-t-xl' src='/img/tash.jpg'/>
+          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
+            <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
+            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[0])}>ת"ש</button>
+            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+          </div>
+        </article>
       </section>
     </div>
   )
