@@ -42,28 +42,28 @@ export default function Mkeva() {
       <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4 pt-8'>
         <h1 className='font-bold'>מידע על נושאים שונים באתר צה"ל</h1>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src=''/>
+          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src='/img/7-days.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>כל המידע שאתם צריכים בנוגע לחטל, זמני ארוחות, מספרי פאלאפון ועזרה ראשונה</p>
             <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%97%d7%95%d7%a4%d7%a9%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>ימי מחלה וחופשה</Link>
           </div>
         </article>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src=''/>
+          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src='/img/house.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>עכשיו זה קל יותר דווחו למפקדים שלכם על נוחכות בלחיצת כפתור</p>
             <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%93%d7%99%d7%95%d7%a8-%d7%95%d7%94%d7%9c%d7%a0%d7%94/'>פתרונות דיור והלנות</Link>
           </div>
         </article>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src=''/>
+          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src='/img/car.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>חיל הרפואה כאן בשבילכם כל מה שאצה צריכים במקום אחד קביעת תורים, פניות לרופאים ובקשות לנרשמים </p>
             <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%a8%d7%9e%d7%91-%d7%99-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>רכב רמב"י</Link>
           </div>
         </article>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src=''/>
+          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/boy.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
             <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%92%d7%a0%d7%99-%d7%99%d7%9c%d7%93%d7%99%d7%9d-%d7%95%d7%a7%d7%99%d7%99%d7%98%d7%a0%d7%95%d7%aa/'>גני ילדים וקייטנות</Link>
@@ -150,7 +150,7 @@ export default function Mkeva() {
       <section className='grid grid-flow-row sm:grid-cols-1 gap-8 pt-8'>
         <h1 className='font-bold'>קבצים נחוצים למשרתי קבע</h1>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src=''/>
+          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/leaf.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>כל המידע הנדרש על הקורסים וגמולות ההשתלמות</p>
             <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[1])}>מכון קבע</button>
@@ -158,7 +158,7 @@ export default function Mkeva() {
           </div>
         </article>
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src=''/>
+          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/family.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
             <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
             <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-indigo-500 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[2])}>הורים לילדים עם צרכים מיוחדים</button>
