@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import { Headroom } from 'react-headroom'
 function Navbar() {
   const menuItem=[
     {
@@ -20,21 +21,23 @@ function Navbar() {
   const location = useLocation()
   return (
    <>
-    <nav className='w-full shadow-md bg-slate-100 '>
-      <ul className="flex  text-center justify-between items-center pt-2 px-4 pb-1">
-        {menuItem.map((item, index)=>{
-          const isActive = location.pathname === item.path;
-          return (
-            <li key={index} className='flex  items-center text-center list-none'>
-              <NavLink to={item.path} className={`flex justify-center font-bold text-[14px] h-full items-center no-underline ${isActive ? ' text-blue-500 border-solid border-b-2 border-b-blue-500': ''}`} >
-                {item.name}
-                {/* <item.icon className='ml-4'/> */}
-              </NavLink>
-            </li>
-          )      
-        })}
-      </ul>
-    </nav>
+    
+        <nav className='w-full shadow-md bg-slate-100 '>
+          <ul className="flex  text-center justify-between items-center pt-2 px-4 pb-1">
+            {menuItem.map((item, index)=>{
+              const isActive = location.pathname === item.path;
+              return (
+                <li key={index} className='flex  items-center text-center list-none'>
+                  <NavLink to={item.path} className={`flex justify-center font-bold text-[14px] h-full items-center no-underline ${isActive ? ' text-blue-500 border-solid border-b-2 border-b-blue-500': ''}`} >
+                    {item.name}
+                    {/* <item.icon className='ml-4'/> */}
+                  </NavLink>
+                </li>
+              )      
+            })}
+          </ul>
+        </nav>
+
    </>
   )
 }
