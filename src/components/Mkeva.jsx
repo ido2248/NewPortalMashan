@@ -12,7 +12,7 @@ export default function Mkeva() {
     setIsPopupOpen(true);
  };
   return (
-    <div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8'>
+    <div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8 mt-[120px]'>
       <div className='font-bold pb-4 px-4'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
       <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4'>
         <h1 className='font-bold'>"חבר"</h1>

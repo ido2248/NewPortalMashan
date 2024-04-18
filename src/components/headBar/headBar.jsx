@@ -8,7 +8,7 @@ function headBar() {
         setShownav(!showNav)
     }
   return (
-    <div dir='rtl' className='sticky top-0 text-right'>
+    <div dir='rtl' className='fixed w-full top-0 text-right'>
         <div className=' flex items-center justify-between bg-white/75 p-2 shadow backdrop-blur'>
             <div className='relative inline-block text-left'>
                 <div>

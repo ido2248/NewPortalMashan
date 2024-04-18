@@ -9,3 +9,15 @@
     width: 100% !important; 
     
 } */
+.visible {
+    /* display: flex; */
+    top: 0;
+    transition: top 0.4s ease-out;
+    color: green;
+  }
+  
+  .hidden {
+    /* display: none; */
+    top: -80px;
+    transition: top 0.4s ease-out;
+  }

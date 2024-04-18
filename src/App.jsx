@@ -6,6 +6,7 @@ import PortalHatal from "./components/PortalHatal";
 import Atz from "./components/Atz";
 import Mkeva from "./components/Mkeva";
 import HeadBar from "./components/headBar/headBar";
+import Buttom from './utiles/Buttom';
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/Atz" element={<Atz/>}/>
             <Route path="/Mkeva" element={<Mkeva/>}/>
           </Routes>
+          <Buttom/>
           <footer dir='rtl' className=' text-center font-bold font-sans'>פותח ע״י מסגרת אמ״ת ©</footer>
       </div>
     </BrowserRouter>

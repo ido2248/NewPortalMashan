@@ -1,34 +1,34 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import Headroom from 'react-headroom'
+import { useState, useEffect } from 'react';
 function Navbar() {
   
-//   const [position, setPosition] = useState(window.pageYOffset);
-//   const [visible, setVisible] = useState(true);
+  const [position, setPosition] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
 
-//   useEffect(() => {
-//     let lastPosition = window.pageYOffset;
+  useEffect(() => {
+    let lastPosition = window.pageYOffset;
 
-//     const handleScroll = () => {
-//       const currentPosition = window.pageYOffset;
-//       setPosition(currentPosition);
+    const handleScroll = () => {
+      const currentPosition = window.pageYOffset;
+      setPosition(currentPosition);
 
-//       if (currentPosition > lastPosition) {
-//         // Scrolling down
-//         setVisible(false);
-//       } else {
-//         // Scrolling up
-//         setVisible(true);
-//       }
+      if (currentPosition > lastPosition) {
+        // Scrolling down
+        setVisible(false);
+      } else {
+        // Scrolling up
+        setVisible(true);
+      }
 
-//       lastPosition = currentPosition;
-//     };
+      lastPosition = currentPosition;
+    };
 
-//     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-//     return () => {
-//       window.removeEventListener('scroll', handleScroll);
-//     };
-//  }, [position]);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+ }, [position]);
 
   const menuItem=[
     {
@@ -50,9 +50,9 @@ function Navbar() {
   const location = useLocation()
   return (
    <>
-    <Headroom >
+    
 
-        <nav className={`w-full shadow-md bg-slate-100  `}>
+        <nav className={`w-full shadow-md bg-slate-100 ${visible? '': 'hidden'} `}>
           <ul className="flex  text-center justify-between items-center pt-2 px-4 pb-1">
             {menuItem.map((item, index)=>{
               const isActive = location.pathname === item.path;
@@ -67,7 +67,7 @@ function Navbar() {
             })}
           </ul>
         </nav>
-    </Headroom>
+    
 
    </>
   )
