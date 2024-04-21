@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import { motion, useMotionValue } from 'framer-motion';
+import { motion, useMotionValue, AnimatePresence } from 'framer-motion';
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import PortalHatal from "./components/PortalHatal";
 import Atz from "./components/Atz";
@@ -44,11 +44,13 @@ function App() {
         <motion.div drag='x'
         dragConstraints={{ left: 0, right: 0 }}
         onDragEnd={handleDragEnd}>
-          <Routes>
-            <Route path="/" element={<PortalHatal/>}/>
-            <Route path="/Atz" element={<Atz/>}/>
-            <Route path="/Mkeva" element={<Mkeva/>}/>
-          </Routes>
+          <AnimatePresence>  
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<PortalHatal/>}/>
+              <Route path="/Atz" element={<Atz/>}/>
+              <Route path="/Mkeva" element={<Mkeva/>}/>
+            </Routes>
+          </AnimatePresence>
         </motion.div>
       </motion.div>
       <Buttom/>
