@@ -38,7 +38,7 @@ function App() {
 };
 
  return (
-    <div className='bg-slate-100 flex flex-col min-h-screen'>
+    <div className='bg-slate-100 flex flex-col min-h-screen overflow-auto'>
       <HeadBar/>
       <motion.div>
         <motion.div drag='x'
