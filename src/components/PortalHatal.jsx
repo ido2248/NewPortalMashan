@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import PopUpPdf from './PopUpPdf'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 
 export default function PortalHatal() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [selectedPdf, setSelectedPdf] = useState(null)
   const file = ['pdf/tash1.pdf','pdf/hatal_courses.pdf']
+  const controlls = useAnimation()
   // const direction = info.offset.x ;
   // console.log(direction)
 
@@ -15,8 +16,9 @@ export default function PortalHatal() {
     setIsPopupOpen(true);
  };
 
+
   return (
-    <motion.div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8 mt-[120px]' initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: -300, opacity: 0 }}>
+    <motion.div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8 mt-[120px]' >
       <div className='font-bold pb-4 px-4 font-cool'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
       <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4'>
         <h1 className='font-bold'>אפלקציות ואתרים שונים לשימושכם</h1>
