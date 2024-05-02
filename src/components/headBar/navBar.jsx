@@ -50,7 +50,7 @@ function Navbar() {
   const location = useLocation()
   return (
    <>
-    <nav className={`sticky w-full shadow-md bg-slate-100 ${visible? ' translate-y-0': ' -translate-y-9 !z-30'} transition ease-in-out duration-800 `}>
+    <nav className={`sticky w-full shadow-md bg-slate-100 ${visible? ' translate-y-0': ' -translate-y-16 !z-30'} transition ease-in-out duration-800 `}>
           <ul className="flex  text-center justify-between items-center pt-2 px-4 pb-1">
             {menuItem.map((item, index)=>{
               const isActive = location.pathname === item.path;

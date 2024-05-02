@@ -15,7 +15,7 @@ function headBar() {
             </div>
             <div className='text-center'>
                 <p dir="rtl" className=" text-4xl font-Katana mb-0">החטיבה הטכנולוגית</p>
-                <p className=' font-Katana text-3xl mt-0 text-purple-600'>משא"ן 360</p>
+                <p className=' font-Katana text-3xl mt-0 text-blue-700'>משא"ן 360</p>
             </div>
             <div>
                 <img className='w-10 h-10' src='/img/Hatal_Inside.png'/>
