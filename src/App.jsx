@@ -11,30 +11,30 @@ import Buttom from './utiles/Buttom';
 import './App.css';
 
 function App() {
- const navigate = useNavigate();
- const location = useLocation();
- const dragX = useMotionValue(0);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const dragX = useMotionValue(0);
 
- const handleDragEnd = (event, info) => {
-  const direction = info.offset.x ;
-  let dir
-  if(direction < -200){
-    dir = 'left'
-    
-  }else if(direction > 200){
-    dir = 'right'
-  }
-  if (location.pathname === '/' && dir === 'left' ) {
-      navigate('/Atz');
-  } else if (location.pathname === '/' && dir === 'right' ) {
-      navigate('/Mkeva');
-  } else {
-      if (location.pathname.startsWith('/Atz') && dir === 'right' ) {
-          navigate('/');
-      } else if (location.pathname.startsWith('/Mkeva') && dir === 'left' ) {
-          navigate('/');
-      }
-  }
+  const handleDragEnd = (event, info) => {
+    const direction = info.offset.x ;
+    let dir
+    if(direction < -200){
+      dir = 'left'
+      
+    }else if(direction > 200){
+      dir = 'right'
+    }
+    if (location.pathname === '/' && dir === 'left' ) {
+        navigate('/Atz');
+    } else if (location.pathname === '/' && dir === 'right' ) {
+        navigate('/Mkeva');
+    } else {
+        if (location.pathname.startsWith('/Atz') && dir === 'right' ) {
+            navigate('/');
+        } else if (location.pathname.startsWith('/Mkeva') && dir === 'left' ) {
+            navigate('/');
+        }
+    }
 };
 
  return (

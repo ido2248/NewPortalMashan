@@ -58,7 +58,7 @@ function Navbar() {
               const isActive = location.pathname === item.path;
               return (
                 <li key={index} className='flex  items-center text-center list-none'>
-                  <NavLink to={item.path} className={`flex justify-center font-bold text-[14px] h-full items-center no-underline ${isActive ? ' text-blue-500 border-solid border-b-2 border-b-blue-500': ''}`} >
+                  <NavLink to={item.path} className={`flex justify-center font-bold text-[14px] h-full items-center no-underline transition-colors duration-500 ease-in-out ${isActive ? 'text-blue-500 border-solid border-b-2 border-b-blue-500': ''}`} >
                     {item.name}
                     {/* <item.icon className='ml-4'/> */}
                   </NavLink>
