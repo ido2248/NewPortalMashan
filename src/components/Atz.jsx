@@ -13,7 +13,7 @@ export default function Atz() {
     setIsPopupOpen(true);
  };
   return (
-    <motion.div className='text-center bg-slate-100 flex-1 container mx-auto py-4 px-8 mt-[120px]' initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: 100, opacity: 0 ,transition:{duration:0.2}}}>
+    <motion.div className='text-center bg-white flex-1 container mx-auto py-4 px-8 mt-[120px]' initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: 100, opacity: 0 ,transition:{duration:0.2}}}>
       <div className='font-bold pb-4 px-4'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
       <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4'>
         <h1 className='font-bold'>ארגון עובדי צהל</h1>

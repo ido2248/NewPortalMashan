@@ -9,17 +9,16 @@ function headBar() {
     }
   return (
     <div dir='rtl' className='fixed w-full top-0 text-right z-50'>
-        <div className=' flex items-center justify-between bg-white/75 p-2 shadow backdrop-blur sticky !z-40'>
-            <div className='relative inline-block text-left'>
-                <div>
-                    <img className='h-14 w-14' src='/img/Hatal.png'/>
-                </div>
+        <div className=' flex items-center justify-between bg-white/75 p-2 px-8  backdrop-blur sticky !z-40'>
+            <div>
+                <img className='h-10 w-10' src='/img/Hatal.png'/>
+            </div>
+            <div className='text-center'>
+                <p dir="rtl" className=" text-4xl font-Katana mb-0">החטיבה הטכנולוגית</p>
+                <p className=' font-Katana text-3xl mt-0 text-purple-600'>משא"ן 360</p>
             </div>
             <div>
-                <h1 dir="rtl" className="secular-one text-xl font-sans font-bold">החטיבה הטכנולוגית</h1>
-            </div>
-            <div>
-                <img className='w-14 h-14' src='/img/Hatal_Inside.png'/>
+                <img className='w-10 h-10' src='/img/Hatal_Inside.png'/>
             </div>
         </div>
         <Navbar/>

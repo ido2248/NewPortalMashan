@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      cool:["Suez One", "serif"]
+      Katana:["Karantina", 'system-ui']
     }
   },
   plugins: [],
