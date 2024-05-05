@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      Katana:["Karantina", 'system-ui']
+      Katana:["Karantina", 'system-ui'],
+      Assin:["Assistant", "sans-serif"]
     }
   },
   plugins: [],

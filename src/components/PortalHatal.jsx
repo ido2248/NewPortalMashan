@@ -18,10 +18,13 @@ export default function PortalHatal() {
 
 
   return (
-    <motion.div className='text-center bg-white flex-1 container mx-auto py-4 px-8 mt-[120px]' initial={{ opacity:0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,transition:{duration:0.2}}}>
-      <div className='font-bold pb-4 px-4 font-cool'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
-      <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4'>
-        <h1 className='font-bold'>אפלקציות ואתרים שונים לשימושכם</h1>
+    <motion.div className='text-center bg-white flex-1 container mx-auto py-4 px-4 mt-[150px]'initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: 100, opacity: 0 ,transition:{duration:0.2}}}>
+      <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתים יקרים</div>
+      <div className=' text-[16px]  font-Assin'>ריכזנו עבורכם במקום אחד את כלל המידע בנושאים השונים: פרט, רפואה, לוגיסטיקה ועוד</div>
+      <br/>
+      <div className=' text-[16px] font-Assin'>המטרה להנגיש עבודרכם את המידע והפעולות השונות</div>
+      <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4 mt-4'>
+        {/* <div className='font-bold'>אפלקציות ואתרים שונים לשימושכם</div> */}
         <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
           <img className=' mx-auto h-40 object-cover bg-gray-200' src='/img/cadic.png'/>
           <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>

@@ -33,7 +33,7 @@ function Navbar() {
   const menuItem=[
     {
       path:'/',
-      name:'חט"ל',
+      name:'סדיר',
     //   icon: BsFillBoxSeamFill
     },
     {
@@ -50,7 +50,7 @@ function Navbar() {
   const location = useLocation()
   return (
    <>
-    <nav className={`sticky w-full shadow-md bg-slate-100 ${visible? ' translate-y-0': ' -translate-y-16 !z-30'} transition ease-in-out duration-800 `}>
+    {/* <nav className={`sticky w-full shadow-md bg-slate-100 ${visible? ' translate-y-0': ' -translate-y-16 !z-30'} transition ease-in-out duration-800 `}>
           <ul className="flex  text-center justify-between items-center pt-2 px-4 pb-1">
             {menuItem.map((item, index)=>{
               const isActive = location.pathname === item.path;
@@ -58,13 +58,27 @@ function Navbar() {
                 <li key={index} className='flex  items-center text-center list-none'>
                   <NavLink to={item.path} className={`flex p-2 justify-center rounded-lg font-Katana text-2xl h-full items-center no-underline ${isActive ? ' text-white border-solid border-b-2 bg-blue-500': ''}`} >
                     {item.name}
-                    {/* <item.icon className='ml-4'/> */}
+                    
                   </NavLink>
                 </li>
               )      
             })}
           </ul>
-        </nav>
+        </nav> */}
+    <div className={`sticly bg-white h-[50px] justify-centers drop-shadow-lg overflow-auto mx-1 rounded-lg ${visible? ' translate-y-0': ' -translate-y-16 !z-30 '} transition ease-in-out duration-800 flex items-center justify-center`}>
+      <ul className='grid grid-cols-3 w-full p-2 gap-2'>
+        {menuItem.map((item, i)=>{
+          const isActive = location.pathname === item.path;
+          return(
+            <li key={i} className={`text-[22px] rounded-md text-center w-auto  font-Katana ${isActive ? 'text-white bg-[#432DC9] ': ''}`}>
+              <NavLink to={item.path} className={``}>
+                {item.name}
+              </NavLink>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
    </>
   )
 }
