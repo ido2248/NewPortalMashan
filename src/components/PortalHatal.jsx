@@ -18,7 +18,7 @@ export default function PortalHatal() {
 
 
   return (
-    <motion.div className='text-center bg-white flex-1 container  px-4 mt-[150px]'initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: 100, opacity: 0 ,transition:{duration:0.2}}}>
+    <motion.div className='text-center bg-white flex-1 container  px-4 mt-[170px]'initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: 100, opacity: 0 ,transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתים יקרים</div>
       <div className=' text-[16px]  font-Assin'>ריכזנו עבורכם במקום אחד את כלל המידע בנושאים השונים: פרט, רפואה, לוגיסטיקה ועוד</div>
       <br/>
@@ -80,7 +80,6 @@ export default function PortalHatal() {
         </article>
       </section>
       <section className='text-white'>
-        <h1 className='font-bold'>קבצים שימושיים</h1>
         <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
           <img className='absolute w-full h-full object-cover rounded-lg' src='/img/newCourse.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
