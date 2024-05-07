@@ -15,7 +15,8 @@ export default function Atz() {
   return (
     <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{ opacity:0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>אזרחים עובדי צה"ל היקרים</div>
-      <div className='text-[16px]  font-Assin'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
+      <div className='text-[16px]  font-Assin'>לפניכם מגוון רחב של מידע בנושאים שונים</div>
+      <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
       <section className='text-black'>
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
@@ -25,7 +26,7 @@ export default function Atz() {
               <p className='font-Assin text-[16px] text-start'>האתר הרשמי של עובדי צהל כל ההטבות האירועים וההתכנסויות במקום אחד</p>
             </div>
           </div>
-          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px] ' to='https://www.ovdayzahal.org.il/'>מעברלאתר</Link>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px] ' to='https://www.ovdayzahal.org.il/'>מעבר לאתר</Link>
         </article>
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
@@ -119,7 +120,7 @@ export default function Atz() {
               <p className='font-Assin text-[16px] text-start'>כל המידע הנדרש על הקורסים וגמולות ההשתלמות</p>
             </div>
           </div>
-          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[0])}>מעבר לאתר</button>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[0])}>לפתיחת הקובץ</button>
           {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
         </article>
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
@@ -130,7 +131,7 @@ export default function Atz() {
               <p className='font-Assin text-[16px] text-start'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
             </div>
           </div>
-          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[1])}>מעבר לאתר</button>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[1])}>לפתיחת הקובץ</button>
           {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
         </article>
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
@@ -141,7 +142,7 @@ export default function Atz() {
               <p className='font-Assin text-[16px] text-start'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
             </div>
           </div>
-          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[2])}>מעבר לאתר</button>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[2])}>לפתיחת הקובץ</button>
           {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
         </article>
       </section>

@@ -13,190 +13,264 @@ export default function Mkeva() {
     setIsPopupOpen(true);
  };
   return (
-    <motion.div className='text-center bg-white flex-1 container mx-auto py-4 px-8 mt-[170px]' initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: -100, opacity: 0 ,transition:{duration:0.2}}}>
-      <div className='font-bold pb-4 px-4'>משרתים יקרים לפנייכם מגוון רחב של מידע בנושאים שונים  כדי להקל את תחילת שרותכם בצה"ל</div>
-      <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4'>
-        <h1 className='font-bold'>"חבר"</h1>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-40 object-contain ' src='/img/giftcard.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>האתר הרשמי שך עובדי צהל כל ההתבות האירועים וההתכנסויות במקום אחד</p>
-            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[0])}>כרטיסי חבר ושי הרמטכ"ל</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: -100, opacity: 0 ,transition:{duration:0.2}}}>
+      <div className=' text-[24px] font-Katana text-[#432DC9]'>משרטי קבע היקרים</div>
+      <div className='text-[16px]  font-Assin'>לשימושכם מידע בתחומים שונים</div>
+      <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
+      <section className='text-black'>
+        {/* <h1 className='font-bold'>"חבר"</h1> */}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2 ' src='/img/giftcard.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>כרטיסי חבר ושי הרמטכ"ל</p>
+              <p className='font-Assin text-[16px] text-start'>כל המדיע הדרוש על כרטיסי חבר ושי הרמטכ"ל</p>
+            </div>
           </div>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[0])}>לפתיחת הקובץ</button>
+          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
         </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-40 object-contain ' src='/img/shield.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>האתר הרשמי של עובדי צהל כל ההתבות האירועים וההתכנסויות במקום אחד</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.hvr.co.il/orders/signin.aspx?redirect=%2Fsite%2Fpg%2Fins_body'>ביטוחים</Link>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2 ' src='/img/shield.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>ביטוחים</p>
+              <p className='font-Assin text-[16px] text-start'>כניסה לאתר חבר בנוגע למידע על ביטוחים</p>
+            </div>
           </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.hvr.co.il/orders/signin.aspx?redirect=%2Fsite%2Fpg%2Fins_body'>מעבר לאתר</Link>
         </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-40 object-contain ' src='/img/accounting.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחופש ? כל המקומות החימם ביותר במקום אחד</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.hvr.co.il/orders/signin.aspx?redirect=/site/pg/mcc_item_new%2C126211'>זכאות לפטור ממס</Link>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2 ' src='/img/accounting.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>זכאות לפטור ממס</p>
+              <p className='font-Assin text-[16px] text-start'>כניסה לאתר חבר בנודע למידע על זכאות לפטור ממס</p>
+            </div>
           </div>
-        </article>
-      </section>
-      <section className='grid grid-flow-row sm:grid-cols-1 gap-8 mb-4 pt-8'>
-        <h1 className='font-bold'>מידע על נושאים שונים באתר צה"ל</h1>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src='/img/7-days.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>כל המידע שאתם צריכים בנוגע לחטל, זמני ארוחות, מספרי פאלאפון ועזרה ראשונה</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%97%d7%95%d7%a4%d7%a9%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>ימי מחלה וחופשה</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src='/img/house.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>עכשיו זה קל יותר דווחו למפקדים שלכם על נוחכות בלחיצת כפתור</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%93%d7%99%d7%95%d7%a8-%d7%95%d7%94%d7%9c%d7%a0%d7%94/'>פתרונות דיור והלנות</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl  p-2' src='/img/car.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>חיל הרפואה כאן בשבילכם כל מה שאצה צריכים במקום אחד קביעת תורים, פניות לרופאים ובקשות לנרשמים </p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%a8%d7%9e%d7%91-%d7%99-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>רכב רמב"י</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/boy.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%92%d7%a0%d7%99-%d7%99%d7%9c%d7%93%d7%99%d7%9d-%d7%95%d7%a7%d7%99%d7%99%d7%98%d7%a0%d7%95%d7%aa/'>גני ילדים וקייטנות</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/parenting.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%a8%d7%99%d7%95%d7%9f-%d7%95%d7%94%d7%95%d7%a8%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>הריון והורות</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/rest.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%D7%9B%D7%AA%D7%91%D7%95%D7%AA-%D7%95%D7%A2%D7%93%D7%9B%D7%95%D7%A0%D7%99%D7%9D/2023/%D7%99%D7%A0%D7%95%D7%90%D7%A8/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A0%D7%95%D7%A4%D7%A9-%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D-%D7%9E%D7%A9%D7%A8%D7%AA%D7%99-%D7%A7%D7%91%D7%A2-%D7%A9%D7%A0%D7%AA-2023/'>נופשים</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/credit.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%9c%d7%95%d7%95%d7%90%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>הלוואות</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/fifnansi.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.youtube.com/watch?v=0tHOpmobk-c'>Check-Up פיננסי</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/commandor.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%98%d7%91%d7%95%d7%aa-%d7%9c%d7%9e%d7%a4%d7%a7%d7%93-%d7%94%d7%9c%d7%95%d7%97%d7%9d-%d7%94%d7%a0%d7%92%d7%93-%d7%94%d7%9c%d7%95%d7%97%d7%9d-%d7%95%d7%90%d7%95%d7%9b%d7%9c%d7%95%d7%a1%d7%99%d7%95%d7%aa-%d7%97%d7%a8%d7%99%d7%92%d7%95%d7%aa/'>מפקדים לוחמים</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/clothes.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%a0%d7%a7%d7%95%d7%93%d7%95%d7%aa-%d7%9e%d7%93%d7%99%d7%9d-%d7%95%d7%a1%d7%a4%d7%95%d7%a8%d7%a9%d7%99%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-2023/'>נקודות מדים וספורשיות</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/scholarship.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%9e%d7%9c%d7%92%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מלגות</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/table.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%99%d7%93%d7%95%d7%a2%d7%99%d7%9d-%d7%91%d7%a6%d7%99%d7%91%d7%95%d7%a8-%d7%95%d7%a1%d7%9e%d7%95%d7%9b%d7%99%d7%9d-%d7%9c%d7%a9%d7%95%d7%9c%d7%97%d7%9f-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>ידועים בציבור וסמוכים לשולחן</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/work.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%94%d7%99%d7%aa%d7%a8-%d7%a2%d7%91%d7%95%d7%93%d7%94-%d7%a4%d7%a8%d7%98%d7%99%d7%aa/'>היתר עבודה</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/gas.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%97%d7%96%d7%a8-%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%a0%d7%a1%d7%99%d7%a2%d7%94-%d7%91%d7%a8%d7%9b%d7%91-%d7%a4%d7%a8%d7%98%d7%99-%d7%9c%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%a7%d7%91%d7%a2-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>החזר הוצאות נסיעה</Link>
-          </div>
-        </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/research.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>רוצים לצאת לחו"ל בזמן השירות ? כל המידע שאתה צריכים בשביל לעשות זאת נמצא ממש כאן</p>
-            <Link className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' to='https://www.idf.il/%D7%90%D7%AA%D7%A8%D7%99-%D7%99%D7%97%D7%99%D7%93%D7%95%D7%AA/%D7%90%D7%AA%D7%A8-%D7%94%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA/%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%9E%D7%98%D7%9B-%D7%9C/%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%97%D7%93%D7%A9%D7%95%D7%AA/04-203-%D7%93%D7%99%D7%A8%D7%95%D7%92-%D7%9E%D7%95%D7%A4-%D7%AA-%D7%9E%D7%97%D7%A7%D7%A8-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%97/'>דירוג מחקר</Link>
-          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.hvr.co.il/orders/signin.aspx?redirect=/site/pg/mcc_item_new%2C126211'>מעבר לאתר</Link>
         </article>
       </section>
-      <section className='grid grid-flow-row sm:grid-cols-1 gap-8 pt-8'>
-        <h1 className='font-bold'>קבצים נחוצים למשרתי קבע</h1>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/leaf.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>כל המידע הנדרש על הקורסים וגמולות ההשתלמות</p>
-            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[1])}>מכון קבע</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+      <section className='text-black'>
+        {/* <h1 className='font-bold'>מידע על נושאים שונים באתר צה"ל</h1> */}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/7-days.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>ימי מחלה וחופשה</p>
+              <p className='font-Assin text-[16px] text-start'>רוצה לקחת ימי חופש או ימי מחלה ? כל המדיע באתר הבא</p>
+            </div>
           </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%97%d7%95%d7%a4%d7%a9%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מעבר לאתר</Link>
         </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/family.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
-            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[2])}>הורים לילדים עם צרכים מיוחדים</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/house.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>פתרונות דיור והלנות</p>
+              <p className='font-Assin text-[16px] text-start'>משרטי קבע הזקוקים לדיר כל המידע הדרוש באתר</p>
+            </div>
           </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%93%d7%99%d7%95%d7%a8-%d7%95%d7%94%d7%9c%d7%a0%d7%94/'>מעבר לאתר</Link>
         </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/help.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
-            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[3])}>סיוע בקשיים כלכליים</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/car.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>רכב רמב"י</p>
+              <p className='font-Assin text-[16px] text-start'>צריכים רכב רמב"י ? כל הזכאים ומידע מפורט באתר</p>
+            </div>
           </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%a8%d7%9e%d7%91-%d7%99-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מעבר לאתר</Link>
         </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/hospital.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
-            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[4])}>בן משפחה מטפל</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/boy.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>גני ילדים מקייטנות</p>
+              <p className='font-Assin text-[16px] text-start'>מידע על גנים וקייטנות כל מה שצריך באתר הבא</p>
+            </div>
           </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%92%d7%a0%d7%99-%d7%99%d7%9c%d7%93%d7%99%d7%9d-%d7%95%d7%a7%d7%99%d7%99%d7%98%d7%a0%d7%95%d7%aa/'>מעבר לאתר</Link>
         </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/desert.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
-            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[5])}>משרתי קבע ביחידות הערבה</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/parenting.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>הריון והורות</p>
+              <p className='font-Assin text-[16px] text-start'>מצפים לילד/ה כל המדיע הדרוש כל זכויותכים</p>
+            </div>
           </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%a8%d7%99%d7%95%d7%9f-%d7%95%d7%94%d7%95%d7%a8%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מעבר לאתר</Link>
         </article>
-        <article className=' flex flex-col mx-auto justify-center bg-gray-200 rounded-xl shadow-lg shadow-slate-900'>
-          <img className=' mx-auto h-56 w-full object-contain rounded-t-xl p-2' src='/img/level.png'/>
-          <div className=' rounded-b-xl bg-slate-800 px-6 py-4 text-slate-300'>
-            <p className='text-slate-300 p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
-            <button className=' text-xl inline-block rounded-t rounded-b mx-auto justify-center bg-blue-600 p-4 font-bold w-full px-1' onClick={()=> openPdf(file[6])}>רמות פעילות</button>
-            {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/rest.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>נופשים</p>
+              <p className='font-Assin text-[16px] text-start'>לפני היציא לנופש כל המדיע הדרוש כל זכויותכם</p>
+            </div>
           </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%D7%9B%D7%AA%D7%91%D7%95%D7%AA-%D7%95%D7%A2%D7%93%D7%9B%D7%95%D7%A0%D7%99%D7%9D/2023/%D7%99%D7%A0%D7%95%D7%90%D7%A8/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A0%D7%95%D7%A4%D7%A9-%D7%A7%D7%A6%D7%99%D7%A0%D7%99%D7%9D-%D7%9E%D7%A9%D7%A8%D7%AA%D7%99-%D7%A7%D7%91%D7%A2-%D7%A9%D7%A0%D7%AA-2023/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/credit.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>הלוואות</p>
+              <p className='font-Assin text-[16px] text-start'>זקוקים להלוואה ? כל המידע הדרוש והזכאים להלוואה באתר</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%9c%d7%95%d7%95%d7%90%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/fifnansi.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>Check-Up פיננסי</p>
+              <p className='font-Assin text-[16px] text-start'>סרטון מידע בנוגע לCkeck-Up פיננסי כל המידע הדרוש</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.youtube.com/watch?v=0tHOpmobk-c'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/commandor.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>מפקדים לוחמים</p>
+              <p className='font-Assin text-[16px] text-start'>הטבות למפקד הלוחם, הנגד הלוחם ואוכלוסיות חריגות</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%98%d7%91%d7%95%d7%aa-%d7%9c%d7%9e%d7%a4%d7%a7%d7%93-%d7%94%d7%9c%d7%95%d7%97%d7%9d-%d7%94%d7%a0%d7%92%d7%93-%d7%94%d7%9c%d7%95%d7%97%d7%9d-%d7%95%d7%90%d7%95%d7%9b%d7%9c%d7%95%d7%a1%d7%99%d7%95%d7%aa-%d7%97%d7%a8%d7%99%d7%92%d7%95%d7%aa/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/clothes.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>נקודות מדים וספורשיות</p>
+              <p className='font-Assin text-[16px] text-start'>המידע הדרוש על נקודות מדים איפה ניתן לממש ומה אפשר לקנות</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%a0%d7%a7%d7%95%d7%93%d7%95%d7%aa-%d7%9e%d7%93%d7%99%d7%9d-%d7%95%d7%a1%d7%a4%d7%95%d7%a8%d7%a9%d7%99%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-2023/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/scholarship.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>מלגות</p>
+              <p className='font-Assin text-[16px] text-start'>כל המידע הדרוש בנוגע למלגות הזכאים לה והסכומים</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%9e%d7%9c%d7%92%d7%95%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/table.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>ידועים בציבור וסמוכים לשולחן</p>
+              <p className='font-Assin text-[16px] text-start'>המדיע הדרוש על ידועים בציבור וסומוכים לשולחן</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%99%d7%93%d7%95%d7%a2%d7%99%d7%9d-%d7%91%d7%a6%d7%99%d7%91%d7%95%d7%a8-%d7%95%d7%a1%d7%9e%d7%95%d7%9b%d7%99%d7%9d-%d7%9c%d7%a9%d7%95%d7%9c%d7%97%d7%9f-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/work.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>היתר עבודה</p>
+              <p className='font-Assin text-[16px] text-start'>כל הפרטים הדרושים להיתר עבודה ואך להשיגה</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94-%d7%94%d7%99%d7%aa%d7%a8-%d7%a2%d7%91%d7%95%d7%93%d7%94-%d7%a4%d7%a8%d7%98%d7%99%d7%aa/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/gas.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>החזר הוצאות נסיעה</p>
+              <p className='font-Assin text-[16px] text-start'>משרתי קבע חסרי או בעלי רכב צבאי חלקי שמשתמשים ברכבם הפרטי כל הזכויות</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99/%d7%a1%d7%95%d7%92%d7%99-%d7%94%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a6%d7%94-%d7%9c/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%a7%d7%91%d7%a2/%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/%d7%94%d7%97%d7%96%d7%a8-%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%a0%d7%a1%d7%99%d7%a2%d7%94-%d7%91%d7%a8%d7%9b%d7%91-%d7%a4%d7%a8%d7%98%d7%99-%d7%9c%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%a7%d7%91%d7%a2-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%9e%d7%a9%d7%a8%d7%aa%d7%99-%d7%94%d7%a7%d7%91%d7%a2-%d7%94%d7%9e%d7%a2%d7%98%d7%a4%d7%aa-%d7%94%d7%a9%d7%9c%d7%9e%d7%94/'>מעבר לאתר</Link>
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/research.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>דירוג מחקר</p>
+              <p className='font-Assin text-[16px] text-start'>דירות מחקר ופיתח על המידע הדרוש נמצא כאן</p>
+            </div>
+          </div>
+          <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%D7%90%D7%AA%D7%A8%D7%99-%D7%99%D7%97%D7%99%D7%93%D7%95%D7%AA/%D7%90%D7%AA%D7%A8-%D7%94%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA/%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%9E%D7%98%D7%9B-%D7%9C/%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%97%D7%93%D7%A9%D7%95%D7%AA/04-203-%D7%93%D7%99%D7%A8%D7%95%D7%92-%D7%9E%D7%95%D7%A4-%D7%AA-%D7%9E%D7%97%D7%A7%D7%A8-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%97/'>מעבר לאתר</Link>
+        </article>
+      </section>
+      <section className='text-black'>
+        {/* <h1 className='font-bold'>קבצים נחוצים למשרתי קבע</h1> */}
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/leaf.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>מכון קבע</p>
+              <p className='font-Assin text-[16px] text-start'>מכון ליעוץ ולטיפול באנשי קבע ומשפחותיהם</p>
+            </div>
+          </div>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[1])}>לפתיחת הקובץ</button>
+          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/family.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>הורים לילדים עם צרכים מיוחדים</p>
+              <p className='font-Assin text-[16px] text-start'>כל המדיע הדרוש להורים לילדים עם צרכים מיוחדים</p>
+            </div>
+          </div>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[2])}>לפתיחת הקובץ</button>
+          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/help.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>סיוע בקשיים כלכליים</p>
+              <p className='font-Assin text-[16px] text-start'> כל מידע הדרוש בסיוע למשרתים בקשיים כלכליים</p>
+            </div>
+          </div>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[3])}>לפתיחת הקובץ</button>
+          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/hospital.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>בן משפחה מטפל</p>
+              <p className='font-Assin text-[16px] text-start'>מדיניות משרת/ת קבע המטפל/ת בבן משפחה</p>
+            </div>
+          </div>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[4])}>לפתיחת הקובץ</button>
+          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/desert.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>משרתי קבע ביחידות הערבה</p>
+              <p className='font-Assin text-[16px] text-start'>כל המידע הדרוש למשרתי קבע ביחידות בערבה/אילת</p>
+            </div>
+          </div>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[5])}>לפתיחת הקובץ</button>
+          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+        </article>
+        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+          <div className='flex flex-row items-center justify-center mb-1'>
+            <img className='h-[68px] w-[68px] m-2' src='/img/level.png'/>
+            <div className=' flex flex-col items-start'>
+              <p className='font-Katana text-[24px] font-bold text-start'>רמות פעילות</p>
+              <p className='font-Assin text-[16px] text-start'>רמות פעילות ותוספות כספיות למשרתי קבע</p>
+            </div>
+          </div>
+          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[6])}>לפתיחת הקובץ</button>
+          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
         </article>
       </section>
     </motion.div>
