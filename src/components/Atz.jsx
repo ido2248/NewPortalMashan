@@ -12,17 +12,32 @@ export default function Atz() {
     setSelectedPdf(pdfPath); // Update the selected PDF file
     setIsPopupOpen(true);
  };
+
+ const hendelChange = (event) => {
+  const searchValue = event.target.value;
+  const h1Elements = document.querySelectorAll('h1'); // Select all h1 elements with the class 'font-Katana'
+ 
+  h1Elements.forEach((element) => {
+    const article = element.closest('article'); // Find the closest 'article' parent of the 'h1'
+    if (element.textContent.toLowerCase().includes(searchValue.toLowerCase())) {
+      article.style.display = ''; // Show the article if the h1 matches the search value
+    } else {
+      article.style.display = 'none'; // Hide the article if the h1 doesn't match
+    }
+  });
+ };
   return (
     <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{ opacity:0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>אזרחים עובדי צה"ל היקרים</div>
       <div className='text-[16px]  font-Assin'>לפניכם מגוון רחב של מידע בנושאים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
+      <input type='text' placeholder='חיפוש' onChange={hendelChange} className='text-[18px] shadow-lg shadow-[#000000]/10 rounded-lg m-3 h-[40px] w-[80%] p-2 outline-none'/>
       <section className='text-black'>
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/eoz.png'/>
             <div className='flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>אתר ארגון עובדי צהל</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>אתר ארגון עובדי צהל</h1>
               <p className='font-Assin text-[16px] text-start'>האתר הרשמי של עובדי צהל כל ההטבות האירועים וההתכנסויות במקום אחד</p>
             </div>
           </div>
@@ -32,7 +47,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/vacation.png'/>
             <div className='flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>אתר הזמנות נופש</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>אתר הזמנות נופש</h1>
               <p className='font-Assin text-[16px] text-start'>רוצים לצאת לחופש ? כל המקומות החימם ביותר במקום אחד</p>
             </div>
           </div>
@@ -44,7 +59,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/taaz.png'/>
             <div className='flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>אתר מרכז תע"צ</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>אתר מרכז תע"צ</h1>
               <p className='font-Assin text-[16px] text-start'>כל מה שאתה צרכים בשביל להתחיל לעבוד בצה"ל</p>
             </div>
           </div>
@@ -54,7 +69,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/dormitory.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>תוספת מעונות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>תוספת מעונות</h1>
               <p className='font-Assin text-[16px] text-start'>כל המידע הדרוש על תוספת מעונות תנאי קבלהת תשלום תוספת מעונות ועוד</p>
             </div>
           </div>
@@ -64,7 +79,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/parent.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>משרת הורה</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>משרת הורה</h1>
               <p className='font-Assin text-[16px] text-start'>הורים ? בשבילכים מידע על משרת הורה</p>
             </div>
           </div>
@@ -74,7 +89,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/salary.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>תוספות וגמול התשלמות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>תוספות וגמול התשלמות</h1>
               <p className='font-Assin text-[16px] text-start'>כל האנשים הזכאים לתוספת השתלמות וגמול השתלמות</p>
             </div>
           </div>
@@ -84,7 +99,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/fmaily-vac.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>חופשת משפחה</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>חופשת משפחה</h1>
               <p className='font-Assin text-[16px] text-start'>מידע המיועד לחופשה משפחתית לחצו כאן</p>
             </div>
           </div>
@@ -94,7 +109,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/student.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>לימודים</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>לימודים</h1>
               <p className='font-Assin text-[16px] text-start'>עובדים בצה"ל ורצים ללמוד כל הפרטים נמצאים כאן</p>
             </div>
           </div>
@@ -104,7 +119,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/health.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>בדיקות רפואיות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>בדיקות רפואיות</h1>
               <p className='font-Assin text-[16px] text-start'>מידע על רפואה לאזרחים עובדי צ"הל לחצו כאן</p>
             </div>
           </div>
@@ -116,7 +131,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/course.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>השתלמות בשכר</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>השתלמות בשכר</h1>
               <p className='font-Assin text-[16px] text-start'>כל המידע הנדרש על הקורסים וגמולות ההשתלמות</p>
             </div>
           </div>
@@ -127,7 +142,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/choose.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>ימי מועד ובחירה</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>ימי מועד ובחירה</h1>
               <p className='font-Assin text-[16px] text-start'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
             </div>
           </div>
@@ -138,7 +153,7 @@ export default function Atz() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/summer.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>חופשות מרוכזות וימי גשר</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>חופשות מרוכזות וימי גשר</h1>
               <p className='font-Assin text-[16px] text-start'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
             </div>
           </div>

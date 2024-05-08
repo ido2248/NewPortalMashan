@@ -8,8 +8,8 @@ function headBar() {
         setShownav(!showNav)
     }
   return (
-    <div dir='rtl' className='fixed w-full top-0 text-right z-50 '>
-        <div className=' flex items-center justify-between bg-white p-2 px-8  backdrop-blur sticky !z-40'>
+    <div dir='rtl' className='fixed w-full  top-0 text-right z-40 '>
+        <div className=' flex items-center justify-between bg-white p-2 px-8  backdrop-blur sticky !z-30'>
             <div>
                 <img className='h-10 w-10' src='/img/Hatal.png'/>
             </div>

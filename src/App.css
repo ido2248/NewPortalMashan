@@ -21,3 +21,8 @@
     top: -80px;
     transition: top 0.4s ease-out;
   }
+  /* src/global.css */
+ .no-scroll {
+  overflow: hidden;
+  height: 100%;
+ }

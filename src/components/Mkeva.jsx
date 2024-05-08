@@ -6,24 +6,39 @@ import { motion } from 'framer-motion'
 export default function Mkeva() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [selectedPdf, setSelectedPdf] = useState(null)
+  const [searchText, setSearchText] = useState("")
   const file = ['pdf/crtisHever.pdf','pdf/mikum.pdf','pdf/horeLeAdamImMugblut.pdf','pdf/siyuaKlkle.pdf','pdf/mshretImBenMshpaha.pdf','pdf/meshrtyHArava.pdf','pdf/tosefetCspit.pdf',]
 
   const openPdf = (pdfPath) => {
     setSelectedPdf(pdfPath); // Update the selected PDF file
     setIsPopupOpen(true);
  };
+ const hendelChange = (event) => {
+  const searchValue = event.target.value;
+  const h1Elements = document.querySelectorAll('h1'); // Select all h1 elements with the class 'font-Katana'
+ 
+  h1Elements.forEach((element) => {
+    const article = element.closest('article'); // Find the closest 'article' parent of the 'h1'
+    if (element.textContent.toLowerCase().includes(searchValue.toLowerCase())) {
+      article.style.display = ''; // Show the article if the h1 matches the search value
+    } else {
+      article.style.display = 'none'; // Hide the article if the h1 doesn't match
+    }
+  });
+ };
   return (
     <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: -100, opacity: 0 ,transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>משרטי קבע היקרים</div>
       <div className='text-[16px]  font-Assin'>לשימושכם מידע בתחומים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
+      <input type='text' placeholder='חיפוש' onChange={hendelChange} className='text-[18px] shadow-lg shadow-[#000000]/10 rounded-lg m-3 h-[40px] w-[80%] p-2 outline-none'/>
       <section className='text-black'>
         {/* <h1 className='font-bold'>"חבר"</h1> */}
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2 ' src='/img/giftcard.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>כרטיסי חבר ושי הרמטכ"ל</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>כרטיסי חבר ושי הרמטכ"ל</h1>
               <p className='font-Assin text-[16px] text-start'>כל המדיע הדרוש על כרטיסי חבר ושי הרמטכ"ל</p>
             </div>
           </div>
@@ -34,7 +49,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2 ' src='/img/shield.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>ביטוחים</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>ביטוחים</h1>
               <p className='font-Assin text-[16px] text-start'>כניסה לאתר חבר בנוגע למידע על ביטוחים</p>
             </div>
           </div>
@@ -44,7 +59,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2 ' src='/img/accounting.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>זכאות לפטור ממס</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>זכאות לפטור ממס</h1>
               <p className='font-Assin text-[16px] text-start'>כניסה לאתר חבר בנודע למידע על זכאות לפטור ממס</p>
             </div>
           </div>
@@ -57,7 +72,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/7-days.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>ימי מחלה וחופשה</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>ימי מחלה וחופשה</h1>
               <p className='font-Assin text-[16px] text-start'>רוצה לקחת ימי חופש או ימי מחלה ? כל המדיע באתר הבא</p>
             </div>
           </div>
@@ -67,7 +82,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/house.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>פתרונות דיור והלנות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>פתרונות דיור והלנות</h1>
               <p className='font-Assin text-[16px] text-start'>משרטי קבע הזקוקים לדיר כל המידע הדרוש באתר</p>
             </div>
           </div>
@@ -77,7 +92,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/car.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>רכב רמב"י</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>רכב רמב"י</h1>
               <p className='font-Assin text-[16px] text-start'>צריכים רכב רמב"י ? כל הזכאים ומידע מפורט באתר</p>
             </div>
           </div>
@@ -87,7 +102,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/boy.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>גני ילדים מקייטנות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>גני ילדים מקייטנות</h1>
               <p className='font-Assin text-[16px] text-start'>מידע על גנים וקייטנות כל מה שצריך באתר הבא</p>
             </div>
           </div>
@@ -97,7 +112,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/parenting.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>הריון והורות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>הריון והורות</h1>
               <p className='font-Assin text-[16px] text-start'>מצפים לילד/ה כל המדיע הדרוש כל זכויותכים</p>
             </div>
           </div>
@@ -107,7 +122,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/rest.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>נופשים</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>נופשים</h1>
               <p className='font-Assin text-[16px] text-start'>לפני היציא לנופש כל המדיע הדרוש כל זכויותכם</p>
             </div>
           </div>
@@ -117,7 +132,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/credit.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>הלוואות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>הלוואות</h1>
               <p className='font-Assin text-[16px] text-start'>זקוקים להלוואה ? כל המידע הדרוש והזכאים להלוואה באתר</p>
             </div>
           </div>
@@ -127,7 +142,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/fifnansi.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>Check-Up פיננסי</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>Check-Up פיננסי</h1>
               <p className='font-Assin text-[16px] text-start'>סרטון מידע בנוגע לCkeck-Up פיננסי כל המידע הדרוש</p>
             </div>
           </div>
@@ -137,7 +152,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/commandor.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>מפקדים לוחמים</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>מפקדים לוחמים</h1>
               <p className='font-Assin text-[16px] text-start'>הטבות למפקד הלוחם, הנגד הלוחם ואוכלוסיות חריגות</p>
             </div>
           </div>
@@ -147,7 +162,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/clothes.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>נקודות מדים וספורשיות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>נקודות מדים וספורשיות</h1>
               <p className='font-Assin text-[16px] text-start'>המידע הדרוש על נקודות מדים איפה ניתן לממש ומה אפשר לקנות</p>
             </div>
           </div>
@@ -157,7 +172,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/scholarship.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>מלגות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>מלגות</h1>
               <p className='font-Assin text-[16px] text-start'>כל המידע הדרוש בנוגע למלגות הזכאים לה והסכומים</p>
             </div>
           </div>
@@ -167,7 +182,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/table.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>ידועים בציבור וסמוכים לשולחן</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>ידועים בציבור וסמוכים לשולחן</h1>
               <p className='font-Assin text-[16px] text-start'>המדיע הדרוש על ידועים בציבור וסומוכים לשולחן</p>
             </div>
           </div>
@@ -177,7 +192,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/work.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>היתר עבודה</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>היתר עבודה</h1>
               <p className='font-Assin text-[16px] text-start'>כל הפרטים הדרושים להיתר עבודה ואך להשיגה</p>
             </div>
           </div>
@@ -187,7 +202,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/gas.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>החזר הוצאות נסיעה</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>החזר הוצאות נסיעה</h1>
               <p className='font-Assin text-[16px] text-start'>משרתי קבע חסרי או בעלי רכב צבאי חלקי שמשתמשים ברכבם הפרטי כל הזכויות</p>
             </div>
           </div>
@@ -197,7 +212,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/research.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>דירוג מחקר</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>דירוג מחקר</h1>
               <p className='font-Assin text-[16px] text-start'>דירות מחקר ופיתח על המידע הדרוש נמצא כאן</p>
             </div>
           </div>
@@ -210,7 +225,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/leaf.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>מכון קבע</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>מכון קבע</h1>
               <p className='font-Assin text-[16px] text-start'>מכון ליעוץ ולטיפול באנשי קבע ומשפחותיהם</p>
             </div>
           </div>
@@ -221,7 +236,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/family.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>הורים לילדים עם צרכים מיוחדים</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>הורים לילדים עם צרכים מיוחדים</h1>
               <p className='font-Assin text-[16px] text-start'>כל המדיע הדרוש להורים לילדים עם צרכים מיוחדים</p>
             </div>
           </div>
@@ -232,7 +247,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/help.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>סיוע בקשיים כלכליים</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>סיוע בקשיים כלכליים</h1>
               <p className='font-Assin text-[16px] text-start'> כל מידע הדרוש בסיוע למשרתים בקשיים כלכליים</p>
             </div>
           </div>
@@ -243,7 +258,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/hospital.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>בן משפחה מטפל</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>בן משפחה מטפל</h1>
               <p className='font-Assin text-[16px] text-start'>מדיניות משרת/ת קבע המטפל/ת בבן משפחה</p>
             </div>
           </div>
@@ -254,7 +269,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/desert.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>משרתי קבע ביחידות הערבה</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>משרתי קבע ביחידות הערבה</h1>
               <p className='font-Assin text-[16px] text-start'>כל המידע הדרוש למשרתי קבע ביחידות בערבה/אילת</p>
             </div>
           </div>
@@ -265,7 +280,7 @@ export default function Mkeva() {
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/level.png'/>
             <div className=' flex flex-col items-start'>
-              <p className='font-Katana text-[24px] font-bold text-start'>רמות פעילות</p>
+              <h1 className='font-Katana text-[24px] font-bold text-start'>רמות פעילות</h1>
               <p className='font-Assin text-[16px] text-start'>רמות פעילות ותוספות כספיות למשרתי קבע</p>
             </div>
           </div>

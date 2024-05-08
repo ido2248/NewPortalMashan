@@ -65,7 +65,7 @@ function Navbar() {
             })}
           </ul>
         </nav> */}
-    <div className={`sticly bg-white h-[50px] justify-centers drop-shadow-lg overflow-auto mx-1 rounded-lg ${visible? ' translate-y-0': ' -translate-y-16 !z-30 '} transition ease-in-out duration-800 flex items-center justify-center`}>
+    <div className={` bg-white h-[50px] justify-centers drop-shadow-lg  mx-1 rounded-lg ${visible? ' translate-y-0': ' -translate-y-16 !z-20 '} transition ease-in-out duration-300 flex items-center justify-center`}>
       <ul className='grid grid-cols-3 w-full p-2 gap-2'>
         {menuItem.map((item, i)=>{
           const isActive = location.pathname === item.path;

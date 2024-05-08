@@ -29,9 +29,9 @@ function App() {
     } else if (location.pathname === '/Atz' && dir === 'right' ) {
         navigate('/Mkeva');
     } else {
-        if (location.pathname.startsWith('/') && dir === 'right' ) {
+        if (location.pathname === '/Mkeva' && dir === 'left' ) {
             navigate('/Atz');
-        } else if (location.pathname.startsWith('/Mkeva') && dir === 'left' ) {
+        } else if (location.pathname === '/' && dir === 'right' ) {
             navigate('/Atz');
         }
     }
