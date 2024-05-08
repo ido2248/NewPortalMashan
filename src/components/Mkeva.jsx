@@ -28,7 +28,7 @@ export default function Mkeva() {
  };
   return (
     <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: -100, opacity: 0 ,transition:{duration:0.2}}}>
-      <div className=' text-[24px] font-Katana text-[#432DC9]'>משרטי קבע היקרים</div>
+      <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתי קבע היקרים</div>
       <div className='text-[16px]  font-Assin'>לשימושכם מידע בתחומים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
       <input type='text' placeholder='חיפוש' onChange={hendelChange} className='text-[18px] shadow-lg shadow-[#000000]/10 rounded-lg m-3 h-[40px] w-[80%] p-2 outline-none'/>
