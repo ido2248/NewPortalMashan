@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import PopUpPdf from './PopUpPdf'
 import { motion } from 'framer-motion'
 
-export default function Atz() {
+export default function Atz({ drag }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [selectedPdf, setSelectedPdf] = useState(null)
   const file = ['pdf/hatlmutPay.pdf','pdf/moedBhira2023.pdf','pdf/hopheshMerukaz2023.pdf']
 
   const openPdf = (pdfPath) => {
+    drag.set(0)
     setSelectedPdf(pdfPath); // Update the selected PDF file
     setIsPopupOpen(true);
  };
@@ -27,7 +28,7 @@ export default function Atz() {
   });
  };
   return (
-    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{ opacity:0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,transition:{duration:0.2}}}>
+    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' >
       <div className=' text-[24px] font-Katana text-[#432DC9]'>אזרחים עובדי צה"ל היקרים</div>
       <div className='text-[16px]  font-Assin'>לפניכם מגוון רחב של מידע בנושאים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>

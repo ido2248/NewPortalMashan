@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import { motion, useMotionValue, AnimatePresence } from 'framer-motion';
+import { motion, useMotionValue, AnimatePresence, useMotionValueEvent } from 'framer-motion';
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import PortalHatal from "./components/PortalHatal";
 import Atz from "./components/Atz";
@@ -14,41 +14,64 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const dragX = useMotionValue(0);
+  const dragXMove = useMotionValue(0);
+  const [dragging, setDragging] = useState(false)
 
-  const handleDragEnd = (event, info) => {
-    const direction = info.offset.x ;
-    let dir
-    if(direction < -200){
-      dir = 'left'
-      
-    }else if(direction > 200){
-      dir = 'right'
-    }
-    if (location.pathname === '/Atz' && dir === 'left' ) {
-        navigate('/');
-    } else if (location.pathname === '/Atz' && dir === 'right' ) {
-        navigate('/Mkeva');
-    } else {
-        if (location.pathname === '/Mkeva' && dir === 'left' ) {
-            navigate('/Atz');
-        } else if (location.pathname === '/' && dir === 'right' ) {
-            navigate('/Atz');
-        }
-    }
+  useEffect(() => {
+    dragX.set(0)
+ }, [location.pathname]);
+
+ useMotionValueEvent(dragX, "change", (latest)=> {
+  if(typeof latest ==="number" && dragging){
+    dragX.set(0)
+  } else {
+    dragX.set(latest)
+    // dragX.set(0)
+    // console.log(dragX.get())
+  }
+
+ })
+
+ const handleDragEnd = (event, info) => {
+  const direction = dragX.get();
+  
+  let dir;
+  if(direction < -70){
+    dir = 'left';
+  } else if(direction > 70){
+    dir = 'right';
+  }
+  if (location.pathname === '/Atz' && dir === 'left' ) {
+      navigate('/');
+      // dragX.set(0); 
+  } else if (location.pathname === '/Atz' && dir === 'right' ) {
+      navigate('/Mkeva');
+      // dragX.set(0); 
+  } else {
+      if (location.pathname === '/Mkeva' && dir === 'left' ) {
+          navigate('/Atz');
+          // dragX.set(0); 
+      } else if (location.pathname === '/' && dir === 'right' ) {
+          navigate('/Atz');
+          // dragX.set(0); 
+      }
+  }
 };
 
  return (
     <div className='bg-white flex flex-col min-h-screen overflow-auto'>
       <HeadBar/>
       <motion.div>
-        <motion.div drag='x'
+        <motion.div drag='x' style={{
+          x:dragX
+        }}
         dragConstraints={{ left: 0, right: 0 }}
-        onDragEnd={handleDragEnd}>
+        onDragEnd={handleDragEnd} >
           <AnimatePresence>  
             <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<PortalHatal/>}/>
-              <Route path="/Atz" element={<Atz/>}/>
-              <Route path="/Mkeva" element={<Mkeva/>}/>
+              <Route path="/" element={<PortalHatal drag={dragX}/>}/>
+              <Route path="/Atz" element={<Atz drag={dragX}/>}/>
+              <Route path="/Mkeva" element={<Mkeva drag={dragX}/>}/>
             </Routes>
           </AnimatePresence>
         </motion.div>

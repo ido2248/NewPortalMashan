@@ -3,22 +3,22 @@ import { useState } from 'react'
 import PopUpPdf from './PopUpPdf'
 import { motion, useAnimation } from 'framer-motion'
 
-export default function PortalHatal() {
+export default function PortalHatal({ drag }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [selectedPdf, setSelectedPdf] = useState(null)
   const file = ['pdf/tash1.pdf','pdf/hatal_courses.pdf']
   const controlls = useAnimation()
   // const direction = info.offset.x ;
-  // console.log(direction)
 
   const openPdf = (pdfPath) => {
+    drag.set(0)
     setSelectedPdf(pdfPath); // Update the selected PDF file
     setIsPopupOpen(true);
  };
 
 
   return (
-    <motion.div className='text-center bg-white flex-1 container  px-4 mt-[170px]'initial={{x:300, opacity:0}} animate={{ x: 0, opacity: 1 }} exit={{ x: 100, opacity: 0 ,transition:{duration:0.2}}}>
+    <motion.div className='text-center bg-white flex-1 container  px-4 mt-[170px]'>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתים יקרים</div>
       <div className=' text-[16px]  font-Assin'>ריכזנו עבורכם במקום אחד את כלל המידע בנושאים השונים: פרט, רפואה, לוגיסטיקה ועוד</div>
       <br/>
