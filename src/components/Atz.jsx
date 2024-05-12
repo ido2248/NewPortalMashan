@@ -28,7 +28,7 @@ export default function Atz({ drag }) {
   });
  };
   return (
-    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' >
+    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ opacity:0, transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>אזרחים עובדי צה"ל היקרים</div>
       <div className='text-[16px]  font-Assin'>לפניכם מגוון רחב של מידע בנושאים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>

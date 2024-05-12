@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import PopUpPdf from './PopUpPdf'
 import { motion } from 'framer-motion'
 
-export default function Mkeva({ drag }) {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
+  
   const [selectedPdf, setSelectedPdf] = useState(null)
   const [searchText, setSearchText] = useState("")
   const file = ['pdf/crtisHever.pdf','pdf/mikum.pdf','pdf/horeLeAdamImMugblut.pdf','pdf/siyuaKlkle.pdf','pdf/mshretImBenMshpaha.pdf','pdf/meshrtyHArava.pdf','pdf/tosefetCspit.pdf',]
@@ -28,7 +28,7 @@ export default function Mkeva({ drag }) {
   });
  };
   return (
-    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' >
+    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:-100, opacity:0, transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתי קבע היקרים</div>
       <div className='text-[16px]  font-Assin'>לשימושכם מידע בתחומים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>

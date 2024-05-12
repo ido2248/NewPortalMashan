@@ -15,14 +15,14 @@ function App() {
   const location = useLocation();
   const dragX = useMotionValue(0);
   const dragXMove = useMotionValue(0);
-  const [dragging, setDragging] = useState(false)
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   useEffect(() => {
     dragX.set(0)
  }, [location.pathname]);
 
  useMotionValueEvent(dragX, "change", (latest)=> {
-  if(typeof latest ==="number" && dragging){
+  if(isPopupOpen === true){
     dragX.set(0)
   } else {
     dragX.set(latest)
@@ -33,6 +33,8 @@ function App() {
  })
 
  const handleDragEnd = (event, info) => {
+  if (isPopupOpen) return;
+
   const direction = dragX.get();
   
   let dir;
@@ -71,7 +73,7 @@ function App() {
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<PortalHatal drag={dragX}/>}/>
               <Route path="/Atz" element={<Atz drag={dragX}/>}/>
-              <Route path="/Mkeva" element={<Mkeva drag={dragX}/>}/>
+              <Route path="/Mkeva" element={<Mkeva drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
             </Routes>
           </AnimatePresence>
         </motion.div>
