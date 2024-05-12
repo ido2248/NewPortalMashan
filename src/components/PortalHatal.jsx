@@ -3,8 +3,7 @@ import { useState } from 'react'
 import PopUpPdf from './PopUpPdf'
 import { motion, useAnimation } from 'framer-motion'
 
-export default function PortalHatal({ drag }) {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
   const file = ['pdf/tash1.pdf','pdf/hatal_courses.pdf']
   const controlls = useAnimation()

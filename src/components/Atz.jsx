@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import PopUpPdf from './PopUpPdf'
 import { motion } from 'framer-motion'
 
-export default function Atz({ drag }) {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
   const file = ['pdf/hatlmutPay.pdf','pdf/moedBhira2023.pdf','pdf/hopheshMerukaz2023.pdf']
 

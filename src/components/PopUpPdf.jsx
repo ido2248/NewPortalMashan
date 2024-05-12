@@ -24,10 +24,9 @@ const PopUpPdf = ({ isOpen, onClose, pdf }) => {
     }
   }
   return (
-    <div className='  fixed inset-0 flex items-center justify-center z-50 bg-slate-800/30' onClick={closepopup}>
+    <div className='  fixed inset-0 flex items-center justify-center z-50 bg-black' onClick={closepopup}>
         <div className='bg-white rounded shadow-lg overflow-auto flex flex-col ' style={{width:'80%', height:'80%'}}> 
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-
             <Viewer fileUrl={pdf} plugins={[defultfile]} defaultScale={SpecialZoomLevel.PageWidth} />
           </Worker>
         </div>

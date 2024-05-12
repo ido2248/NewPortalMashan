@@ -71,8 +71,8 @@ function App() {
         onDragEnd={handleDragEnd} >
           <AnimatePresence>  
             <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<PortalHatal drag={dragX}/>}/>
-              <Route path="/Atz" element={<Atz drag={dragX}/>}/>
+              <Route path="/" element={<PortalHatal drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
+              <Route path="/Atz" element={<Atz drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
               <Route path="/Mkeva" element={<Mkeva drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
             </Routes>
           </AnimatePresence>
