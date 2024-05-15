@@ -37,7 +37,7 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
             <p className='text-[16px] p-2'>כל המידע העדכני ביותר על מלחמת חרבות ברזל בזמן אמת</p>
             <div className='flex justify-start'>
-              <Link className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.home.idf.il/'>חרבות ברזל</Link>
+              <Link className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://portal-mashan-hatal.azurewebsites.net/swords-of-iron/'>חרבות ברזל</Link>
             </div>
           </div>
         </article>
