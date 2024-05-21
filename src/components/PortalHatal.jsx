@@ -46,12 +46,12 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
             <p className='text-[16px] p-2'>כל המידע שאתם צריכים בנוגע לחטל, זמני ארוחות, מספרי פאלאפון ועזרה ראשונה</p>
             <div className='flex justify-start'>
-              <Link className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://sadir.azurewebsites.net/'>סדיר</Link>
+              <Link className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://sadir.azurewebsites.net/'>מנשר קליטה לחט"ל</Link>
             </div>
           </div>
         </article>
-         <article className=' mx-2 rounded-lg shadow-lg shadow-[#000000]/10 bg-[#F8F8F8] m-6 h-[279px] relative justify-center flex'>
-          <img className='absolute w-[190px] h-[157px] object-cover' src='/img/newDo1.png'/>
+         <article className=' mx-2 rounded-lg shadow-lg shadow-[#000000]/10 bg-[#F8F8F8] m-6 h-[279px] relative justify-center flex bg-gradient-to-br from-20% to-50% to-[#EFCA3D] from-[#F5E264]'>
+          <img className=' w-[238px] h-[208px] object-cover' src='/img/new2Do1.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
           <p className='text-[16px] p-2'>עכשיו זה קל יותר דווחו למפקדים שלכם על נוחכות בלחיצת כפתור</p>
             <div className='flex justify-start'>
