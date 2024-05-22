@@ -43,18 +43,18 @@ function App() {
   } else if(direction > 70){
     dir = 'right';
   }
-  if (location.pathname === '/Atz' && dir === 'left' ) {
+  if (location.pathname === '/Mkeva' && dir === 'left' ) {
+      navigate('/Atz');
+      // dragX.set(0); 
+  } else if (location.pathname === '/Mkeva' && dir === 'right' ) {
       navigate('/');
       // dragX.set(0); 
-  } else if (location.pathname === '/Atz' && dir === 'right' ) {
-      navigate('/Mkeva');
-      // dragX.set(0); 
   } else {
-      if (location.pathname === '/Mkeva' && dir === 'left' ) {
-          navigate('/Atz');
+      if (location.pathname === '/' && dir === 'left' ) {
+          navigate('/Mkeva');
           // dragX.set(0); 
-      } else if (location.pathname === '/' && dir === 'right' ) {
-          navigate('/Atz');
+      } else if (location.pathname === '/Atz' && dir === 'right' ) {
+          navigate('/Mkeva');
           // dragX.set(0); 
       }
   }

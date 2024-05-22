@@ -32,11 +32,6 @@ function Navbar() {
 
   const menuItem=[
     {
-      path:'/',
-      name:'סדיר',
-    //   icon: BsFillBoxSeamFill
-    },
-    {
       path:'/Atz',
       name:'אזרחים עובדי צהל',
     //   icon: BiDetail
@@ -45,6 +40,11 @@ function Navbar() {
       path:'/Mkeva',
       name:'משרתי קבע',
     //   icon: TbReportAnalytics
+    },
+    {
+      path:'/',
+      name:'סדיר',
+    //   icon: BsFillBoxSeamFill
     },
   ]
   const location = useLocation()
