@@ -4,6 +4,14 @@ import viteLogo from '/vite.svg';
 import { motion, useMotionValue, AnimatePresence, useMotionValueEvent } from 'framer-motion';
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import PortalHatal from "./components/PortalHatal";
+import HatalMnifest from "./components/Hatal-Manifest/HManifestHome"
+import BmInstructions from "./components/Hatal-Manifest/BmInstructions"
+import Highlights from "./components/Hatal-Manifest/Highlights"
+import OpenDoor from "./components/Hatal-Manifest/OpenDoor"
+import PublicActivities from "./components/Hatal-Manifest/PublicActivities"
+import PublicCommittee from "./components/Hatal-Manifest/PublicCommittee"
+import Safety from "./components/Hatal-Manifest/Safety"
+import Values from "./components/Hatal-Manifest/Values"
 import Atz from "./components/Atz";
 import Mkeva from "./components/Mkeva";
 import HeadBar from "./components/headBar/headBar";
@@ -16,6 +24,13 @@ function App() {
   const dragX = useMotionValue(0);
   const dragXMove = useMotionValue(0);
   const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [isHatalMnifestActive, setIsHatalMnifestActive] = useState(false);
+
+
+  useEffect(() => {
+    // Check if the current pathname starts with /HatalMnifest
+    setIsHatalMnifestActive(location.pathname.startsWith("/HatalMnifest"));
+  }, [location.pathname]);
 
   useEffect(() => {
     dragX.set(0)
@@ -61,8 +76,8 @@ function App() {
 };
 
  return (
-    <div className='bg-white flex flex-col min-h-screen overflow-auto'>
-      <HeadBar/>
+    <div className='bg-gradient-to-br from-[#FFFFFF] to-[#F5F5F5] flex flex-col min-h-screen overflow-auto'>
+      <HeadBar isHatalMnifestActive={isHatalMnifestActive} />
       <motion.div>
         <motion.div drag='x' style={{
           x:dragX
@@ -74,6 +89,19 @@ function App() {
               <Route path="/" element={<PortalHatal drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
               <Route path="/Atz" element={<Atz drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
               <Route path="/Mkeva" element={<Mkeva drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
+              <Route path="/HatalMnifest/*" element={
+                <Routes>
+                  <Route index element={<HatalMnifest/>}/>
+                  <Route path="/bm-instructions" element={<BmInstructions />}/>
+                  <Route path="/highlights" element={<Highlights />}/>
+                  <Route path="/values" element={<Values />}/>
+                  <Route path="/safety" element={<Safety />}/>
+                  <Route path="/open-door" element={<OpenDoor />}/>
+                  <Route path="/public-activities" element={<PublicActivities />}/>
+                  <Route path="/public-committees" element={<PublicCommittee />}/>
+                </Routes>
+              }>
+              </Route>
             </Routes>
           </AnimatePresence>
         </motion.div>

@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-function Navbar() {
+function Navbar({isHatalMnifestActive}) {
   
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
@@ -65,10 +65,10 @@ function Navbar() {
             })}
           </ul>
         </nav> */}
-    <div className={` bg-white h-[50px] justify-centers drop-shadow-lg  mx-1 rounded-lg ${visible? ' translate-y-0': ' -translate-y-16 !z-20 '} transition ease-in-out duration-300 flex items-center justify-center`}>
+    <div className={` bg-white h-[50px] justify-centers drop-shadow-lg  mx-1 rounded-lg ${visible? ' translate-y-0': ' -translate-y-16 !z-20 '} ${isHatalMnifestActive? 'hidden':'flex'}  transition ease-in-out duration-300 flex items-center justify-center `}>
       <ul className='grid grid-cols-3 w-full p-2 gap-2'>
         {menuItem.map((item, i)=>{
-          const isActive = location.pathname === item.path;
+          const isActive = location.pathname === item.path || (isHatalMnifestActive && item.path.startsWith("/HatalMnifest"))
           return(
             <li key={i} className={`text-[22px] rounded-md text-center w-auto  font-Katana ${isActive ? 'text-white bg-[#432DC9] ': ''}`}>
               <NavLink to={item.path} className={``}>
