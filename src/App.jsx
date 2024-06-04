@@ -16,6 +16,7 @@ import Atz from "./components/Atz";
 import Mkeva from "./components/Mkeva";
 import HeadBar from "./components/headBar/headBar";
 import Buttom from './utiles/Buttom';
+import Layout from './components/Layout';
 import './App.css';
 
 function App() {
@@ -53,9 +54,9 @@ function App() {
   const direction = dragX.get();
   
   let dir;
-  if(direction < -60){
+  if(direction < -50){
     dir = 'left';
-  } else if(direction > 60){
+  } else if(direction > 50){
     dir = 'right';
   }
   if (location.pathname === '/Mkeva' && dir === 'left' ) {
@@ -76,7 +77,7 @@ function App() {
 };
 
  return (
-    <div className='bg-gradient-to-br from-[#FFFFFF] to-[#F5F5F5] flex flex-col min-h-screen overflow-auto'>
+    <div className='bg-gradient-to-br from-[#FFFFFF] to-[#F5F5F5] flex flex-col min-h-screen overflow-hidden'>
       <HeadBar isHatalMnifestActive={isHatalMnifestActive} />
       <motion.div>
         <motion.div drag='x' style={{
@@ -86,23 +87,25 @@ function App() {
         onDragEnd={handleDragEnd} >
           <AnimatePresence>  
             <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<PortalHatal drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
-              <Route path="/Atz" element={<Atz drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
-              <Route path="/Mkeva" element={<Mkeva drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
-              <Route path="/HatalMnifest/*" element={
-                <Routes>
-                  <Route index element={<HatalMnifest/>}/>
-                  <Route path="/bm-instructions" element={<BmInstructions />}/>
-                  <Route path="/highlights" element={<Highlights />}/>
-                  <Route path="/values" element={<Values />}/>
-                  <Route path="/safety" element={<Safety />}/>
-                  <Route path="/open-door" element={<OpenDoor />}/>
-                  <Route path="/public-activities" element={<PublicActivities />}/>
-                  <Route path="/public-committees" element={<PublicCommittee />}/>
-                </Routes>
-              }>
+              <Route path='/' element={<Layout/>}>
+                <Route index element={<PortalHatal drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
+                <Route path="/Atz" element={<Atz drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
+                <Route path="/Mkeva" element={<Mkeva drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
+                <Route path="/HatalMnifest/*" element={
+                  <Routes>
+                    <Route index element={<HatalMnifest/>}/>
+                    <Route path="/bm-instructions" element={<BmInstructions />}/>
+                    <Route path="/highlights" element={<Highlights />}/>
+                    <Route path="/values" element={<Values />}/>
+                    <Route path="/safety" element={<Safety />}/>
+                    <Route path="/open-door" element={<OpenDoor />}/>
+                    <Route path="/public-activities" element={<PublicActivities />}/>
+                    <Route path="/public-committees" element={<PublicCommittee />}/>
+                  </Routes>
+                }>
+                </Route>
+                <Route path='*' element={<Navigate to='/'/>}/>
               </Route>
-              <Route path='*' element={<Navigate to='/'/>}/>
             </Routes>
           </AnimatePresence>
         </motion.div>
