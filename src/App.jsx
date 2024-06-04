@@ -53,9 +53,9 @@ function App() {
   const direction = dragX.get();
   
   let dir;
-  if(direction < -70){
+  if(direction < -60){
     dir = 'left';
-  } else if(direction > 70){
+  } else if(direction > 60){
     dir = 'right';
   }
   if (location.pathname === '/Mkeva' && dir === 'left' ) {
@@ -108,7 +108,7 @@ function App() {
         </motion.div>
       </motion.div>
       <Buttom/>
-      <footer dir='rtl' className=' text-center font-bold font-sans'>פותח ע״י מסגרת אמ״ת ©</footer>
+      <footer dir='rtl' className=' text-center font-bold font-Assin text-[14px]'>פותח ע״י מסגרת אמ״ת ©</footer>
     </div>
  );
 }

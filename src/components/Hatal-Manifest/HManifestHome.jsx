@@ -397,11 +397,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
         })
       },[])
   return (
-<<<<<<< HEAD
-    <div className='text-center bg-white flex-1 container  px-4 pt-[10px]'>
-=======
-    <div className='text-center bg-white flex-1 container  px-4 mt-[120px]'>
->>>>>>> parent of 5ea9402 (update)
+    <div className='text-center bg-white flex-1 container  px-4 pt-[120px]'>
       <section
           id="welcome"
           className="mx-auto flex flex-col"
