@@ -65,7 +65,7 @@ function Navbar({isHatalMnifestActive}) {
             })}
           </ul>
         </nav> */}
-    <div className={` bg-white h-[50px] justify-centers drop-shadow-lg  mx-1 rounded-lg ${visible? ' translate-y-0': ' -translate-y-16 !z-20 '} ${isHatalMnifestActive? 'hidden':'flex'}  transition ease-in-out duration-300 flex items-center justify-center `}>
+    <div className={` bg-white h-[50px] justify-centers drop-shadow-lg  mx-1 rounded-lg  ${isHatalMnifestActive? 'hidden':'flex'}  transition ease-in-out duration-300 flex items-center justify-center `}>
       <ul className='grid grid-cols-3 w-full p-2 gap-2'>
         {menuItem.map((item, i)=>{
           const isActive = location.pathname === item.path || (isHatalMnifestActive && item.path.startsWith("/HatalMnifest"))
