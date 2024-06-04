@@ -108,7 +108,7 @@ function App() {
         </motion.div>
       </motion.div>
       <Buttom/>
-      <footer dir='rtl' className=' text-center font-bold font-assin text-[14px]'>פותח ע״י מסגרת אמ״ת ©</footer>
+      <footer dir='rtl' className=' text-center font-bold font-sans'>פותח ע״י מסגרת אמ״ת ©</footer>
     </div>
  );
 }

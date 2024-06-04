@@ -9,9 +9,9 @@ function headBar({ isHatalMnifestActive }) {
         setShownav(!showNav)
     }
     const location = useLocation();
-    const navClasses = location.pathname.startsWith  ("/HatalMnifest")? "flex items-center justify-between bg-white p-2 px-5 pr-3 backdrop-blur sticky !z-30 " : "flex items-center justify-between bg-white p-2 px-8 pl-5 backdrop-blur sticky !z-30";
+    const navClasses = location.pathname.startsWith  ("/HatalMnifest")? "flex items-center justify-between bg-white p-2 px-5 backdrop-blur sticky !z-30 " : "flex items-center justify-between bg-white p-2 px-8 pl-5 backdrop-blur sticky !z-30";
   return (
-    <div dir='rtl' className='sticky top-0 text-right z-40 '>
+    <div dir='rtl' className='fixed w-full  top-0 text-right z-40 '>
         <div className={`${navClasses}`}>
             <div className='flex justify-center items-center'>
                 {location.pathname.startsWith  ("/HatalMnifest") && (

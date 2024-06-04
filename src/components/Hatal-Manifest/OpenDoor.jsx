@@ -3,7 +3,11 @@ export default function OpenDoor() {
     return (
       <section
         id="open-door"
+<<<<<<< HEAD
         className="container prose prose-sm mx-auto px-8 py-4 md:prose-lg lg:prose-xl bg-gradient-to-br from-[#FFFFFF] to-[#F5F5F5] pt-[10px]"
+=======
+        className="container prose prose-sm mx-auto px-8 py-4 md:prose-lg lg:prose-xl bg-gradient-to-br from-[#FFFFFF] to-[#F5F5F5] mt-[120px]"
+>>>>>>> parent of 5ea9402 (update)
         
       >
         <p className="font-Katana text-[#432DC9] text-[28px] m-0">נוהל דלת פתוחה</p>

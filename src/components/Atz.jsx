@@ -27,7 +27,11 @@ export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
   });
  };
   return (
+<<<<<<< HEAD
     <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 pt-[10px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:100, opacity:0, transition:{duration:0.2}}} >
+=======
+    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[170px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:100, opacity:0, transition:{duration:0.2}}} >
+>>>>>>> parent of 5ea9402 (update)
       <div className=' text-[24px] font-Katana text-[#432DC9]'>אזרחים עובדי צה"ל היקרים</div>
       <div className='text-[16px]  font-Assin'>לפניכם מגוון רחב של מידע בנושאים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
