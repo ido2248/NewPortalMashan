@@ -3,7 +3,7 @@ export default function Safety() {
     return (
       <section
         id="safety"
-        className="container prose prose-sm mx-auto px-8 py-4 md:prose-lg lg:prose-xl bg-gradient-to-br from-[#FFFFFF] to-[#F5F5F5] mt-[120px]"
+        className="container prose prose-sm mx-auto px-8 py-4 md:prose-lg lg:prose-xl bg-gradient-to-br from-[#FFFFFF] to-[#F5F5F5] mt-[10px]"
         
       >
         <p className="font-Katana text-[#432DC9] text-[28px] m-0">נהלי בטיחות ביחידה</p>
