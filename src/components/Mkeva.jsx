@@ -28,7 +28,7 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
   });
  };
   return (
-    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 mt-[10px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ opacity:0, transition:{duration:0.2}}}>
+    <motion.div dir='rtl' className='text-center bg-white flex-1 container  px-4 pt-[10px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ opacity:0, transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתי קבע היקרים</div>
       <div className='text-[16px]  font-Assin'>לשימושכם מידע בתחומים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>

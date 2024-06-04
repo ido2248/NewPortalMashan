@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import { motion, useMotionValue, AnimatePresence, useMotionValueEvent } from 'framer-motion';
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
 import PortalHatal from "./components/PortalHatal";
 import HatalMnifest from "./components/Hatal-Manifest/HManifestHome"
 import BmInstructions from "./components/Hatal-Manifest/BmInstructions"
@@ -102,6 +102,7 @@ function App() {
                 </Routes>
               }>
               </Route>
+              <Route path='*' element={<Navigate to='/'/>}/>
             </Routes>
           </AnimatePresence>
         </motion.div>
