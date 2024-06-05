@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import PopUpPdf from './PopUpPdf'
 import { motion } from 'framer-motion'
@@ -27,6 +27,11 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
     }
   });
  };
+ useEffect(() => {
+  window.scroll({
+    top:0
+  })
+},[])
   return (
     <motion.div dir='rtl' className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[160px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ opacity:0, transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתי קבע היקרים</div>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PopUpPdf from './PopUpPdf'
 import { motion, useAnimation } from 'framer-motion'
 
@@ -15,6 +15,11 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
     setIsPopupOpen(true);
  };
 
+ useEffect(() => {
+  window.scroll({
+    top:0
+  })
+},[])
 
   return (
     <motion.div className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[160px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:-100, opacity:0, transition:{duration:0.2}}}>
