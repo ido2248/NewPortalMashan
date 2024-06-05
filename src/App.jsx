@@ -54,9 +54,9 @@ function App() {
   const direction = dragX.get();
   
   let dir;
-  if(direction < -50){
+  if(direction < -17){
     dir = 'left';
-  } else if(direction > 50){
+  } else if(direction > 17){
     dir = 'right';
   }
   if (location.pathname === '/Mkeva' && dir === 'left' ) {

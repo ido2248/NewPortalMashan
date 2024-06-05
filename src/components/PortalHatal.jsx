@@ -17,7 +17,7 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
 
 
   return (
-    <motion.div className='text-center bg-white flex-1 container  px-4 pt-[160px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:-100, opacity:0, transition:{duration:0.2}}}>
+    <motion.div className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[160px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:-100, opacity:0, transition:{duration:0.2}}}>
       <div className=' text-[24px] font-Katana text-[#432DC9]'>משרתים יקרים</div>
       <div className=' text-[16px]  font-Assin'>ריכזנו עבורכם במקום אחד את כלל המידע בנושאים השונים: פרט, רפואה, לוגיסטיקה ועוד</div>
       <br/>
