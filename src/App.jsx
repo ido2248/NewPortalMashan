@@ -36,6 +36,7 @@ function App() {
   useEffect(() => {
     dragX.set(0)
  }, [location.pathname]);
+
  useEffect(() => {
   if(location.pathname !== "/"){
     navigate("/")
