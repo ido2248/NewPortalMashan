@@ -36,6 +36,11 @@ function App() {
   useEffect(() => {
     dragX.set(0)
  }, [location.pathname]);
+ useEffect(() => {
+  if(location.pathname !== "/"){
+    navigate("/")
+  }
+ }, [])
 
  useMotionValueEvent(dragX, "change", (latest)=> {
   if(isPopupOpen === true){
@@ -104,7 +109,7 @@ function App() {
                   </Routes>
                 }>
                 </Route>
-                <Route path='*' element={<Navigate to='/'/>}/>
+                <Route path='*' element={<Navigate to='/' />}/>
               </Route>
             </Routes>
           </AnimatePresence>
