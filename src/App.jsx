@@ -37,11 +37,6 @@ function App() {
     dragX.set(0)
  }, [location.pathname]);
 
- useEffect(() => {
-  if(location.pathname !== "/"){
-    navigate("/")
-  }
- }, [])
 
  useMotionValueEvent(dragX, "change", (latest)=> {
   if(isPopupOpen === true){
