@@ -397,7 +397,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
         })
       },[])
   return (
-    <div className='text-center bg-white flex-1 container  px-4 pt-[120px]'>
+    <div className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[120px]'>
       <section
           id="welcome"
           className="mx-auto flex flex-col"
@@ -432,7 +432,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
           </div>
           <Nav links={LINKS} />
           <h2 className="mt-4 mb-2 text-center text-[20px] font-Katana text-[#432DC9] md:text-3xl">מידע שימושי</h2>
-          <div className=" mx-auto grid h-full grid-flow-row grid-cols-2 gap-x-8 gap-3 bg-white p-4 shadow-lg shadow-[#000000]/10 rounded-lg">
+          <article className=" mx-auto mb-10 grid h-full grid-flow-row grid-cols-2  gap-3 bg-white p-4 shadow-lg shadow-[#000000]/10 rounded-lg">
               <Drawer
                 title="ארוחות"
                 image='/img/lunch.png'
@@ -654,7 +654,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
                 </p>
               </Drawer>
             
-          </div>
+          </article>
           <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative justify-center flex  bg-white'>
           <img className='absolute w-[185px] h-[165px] object-cover' src='/img/cadic.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full text-white text-center'>
