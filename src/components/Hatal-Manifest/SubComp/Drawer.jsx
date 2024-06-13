@@ -38,7 +38,7 @@ function Drawer({ title, onClose, children, open }) {
           <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-hidden">
+        <div className="fixed inset-0 overflow-auto">
             <div className="pointer-events-none fixed inset-0 ">
               <Transition.Child
                 as={Fragment}
