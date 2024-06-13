@@ -432,7 +432,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
           </div>
           <Nav links={LINKS} />
           <h2 className="mt-4 mb-2 text-center text-[20px] font-Katana text-[#432DC9] md:text-3xl">מידע שימושי</h2>
-          <article className=" mx-auto grid h-full grid-flow-row grid-cols-2 gap-x-8 gap-3 overflow-auto bg-white p-4 shadow-lg shadow-[#000000]/10 rounded-lg">
+          <article className=" mx-auto grid grid-flow-row grid-cols-2 gap-x-8 gap-3 overflow-auto bg-white p-4 shadow-lg shadow-[#000000]/10 rounded-lg">
               <Drawer
                 title="ארוחות"
                 image='/img/lunch.png'

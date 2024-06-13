@@ -94,7 +94,7 @@ export default function DrawerButton({ title, image, children, first, last, isBu
       <button
         className={`${first ? "rounded-t" : ""} ${last ? "rounded-b" : ""} ${
           isBus ? "mx-auto w-1/2 px-1 py-2" : ""
-        } text-[20px] text-white grid-cols-1 grid rounded-t rounded-b bg-[#432DC9] hover:bg-[#422dc9b0] h-full p-[6px] font-Katana px-[25px] overflow-y-auto`}
+        } text-[20px] text-white grid-cols-1 grid rounded-t rounded-b bg-[#432DC9] hover:bg-[#422dc9b0] p-[6px] font-Katana px-[25px] overflow-y-auto`}
         onClick={() => setOpen(true)}
       >
         {title}
