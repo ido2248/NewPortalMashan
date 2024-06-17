@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import { motion, useMotionValue, AnimatePresence, useMotionValueEvent } from 'framer-motion';
 import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
 import PortalHatal from "./components/PortalHatal";
@@ -88,7 +86,7 @@ function App() {
         onDragEnd={handleDragEnd} >
           <AnimatePresence>  
             <Routes location={location} key={location.pathname}>
-              <Route path='/' element={<Layout/>}>
+              <Route  path='/' element={<Layout/>}>
                 <Route index element={<PortalHatal drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
                 <Route path="/Atz" element={<Atz drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>
                 <Route path="/Mkeva" element={<Mkeva drag={dragX} isPopupOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen}/>}/>

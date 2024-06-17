@@ -1,6 +1,20 @@
 {
-    "navigationFallback": {
-      "rewrite": "/index.html",
-      "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
-    }
-  }
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": []
+  },
+  "routes": [
+      {
+          "routeId": "home",
+          "routeType": "Rewrite",
+          "routePattern": "^/$",
+          "destination": "/index.html"
+      },
+      {
+          "routeId": "notFound",
+          "routeType": "Rewrite",
+          "routePattern": ".*",
+          "destination": "/index.html"
+      }
+  ]
+}
