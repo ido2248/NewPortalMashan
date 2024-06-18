@@ -38,7 +38,7 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
       <div className='text-[16px]  font-Assin'>לשימושכם מידע בתחומים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
       <input type='text' placeholder='חיפוש' onChange={hendelChange} className='text-[18px] shadow-lg shadow-[#000000]/10 rounded-lg m-3 h-[40px] w-[80%] p-2 outline-none'/>
-      <section className='text-black'>
+      <section className='text-black' id="Hever">
         {/* <h1 className='font-bold'>"חבר"</h1> */}
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
@@ -72,7 +72,7 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
           <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.hvr.co.il/orders/signin.aspx?redirect=/site/pg/mcc_item_new%2C126211'>מעבר לאתר</Link>
         </article>
       </section>
-      <section className='text-black'>
+      <section className='text-black' id="Mkeva-main">
         {/* <h1 className='font-bold'>מידע על נושאים שונים באתר צה"ל</h1> */}
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
@@ -225,7 +225,7 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
           <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/%D7%90%D7%AA%D7%A8%D7%99-%D7%99%D7%97%D7%99%D7%93%D7%95%D7%AA/%D7%90%D7%AA%D7%A8-%D7%94%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA/%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%9E%D7%98%D7%9B-%D7%9C/%D7%A4%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%97%D7%93%D7%A9%D7%95%D7%AA/04-203-%D7%93%D7%99%D7%A8%D7%95%D7%92-%D7%9E%D7%95%D7%A4-%D7%AA-%D7%9E%D7%97%D7%A7%D7%A8-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%97/'>מעבר לאתר</Link>
         </article>
       </section>
-      <section className='text-black'>
+      <section className='text-black' id="Mkeva-pdf">
         {/* <h1 className='font-bold'>קבצים נחוצים למשרתי קבע</h1> */}
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>

@@ -656,7 +656,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
             
           </article>
         </section>
-        <section>
+        <section id="cadic">
           <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative justify-center flex  bg-white'>
           <img className='absolute w-[185px] h-[165px] object-cover' src='/img/cadic.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full text-white text-center'>

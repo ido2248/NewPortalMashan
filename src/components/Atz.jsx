@@ -37,7 +37,7 @@ export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
       <div className='text-[16px]  font-Assin'>לפניכם מגוון רחב של מידע בנושאים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>
       <input type='text' placeholder='חיפוש' onChange={hendelChange} className='text-[18px] shadow-lg shadow-[#000000]/10 rounded-lg m-3 h-[40px] w-[80%] p-2 outline-none'/>
-      <section className='text-black'>
+      <section className='text-black' id="Atz-main">
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className='h-[68px] w-[68px] m-2' src='/img/eoz.png'/>
@@ -131,7 +131,7 @@ export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
           <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.idf.il/19906'>מעבר לאתר</Link>
         </article>
       </section>
-      <section className=' text-black'>
+      <section className=' text-black' id="Atz-Pdf">
         <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/course.png'/>

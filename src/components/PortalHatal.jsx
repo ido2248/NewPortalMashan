@@ -27,7 +27,7 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
       <div className=' text-[16px]  font-Assin'>ריכזנו עבורכם במקום אחד את כלל המידע בנושאים השונים: פרט, רפואה, לוגיסטיקה ועוד</div>
       <br/>
       <div className=' text-[16px] font-Assin'>המטרה להנגיש עבודרכם את המידע והפעולות השונות</div>
-      <section className='text-white'>
+      <section className='text-white' id="Portal">
         <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative justify-center flex '>
           <img className='absolute w-[185px] h-[165px] object-cover' src='/img/cadic.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full '>
@@ -83,7 +83,7 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
           </div>
         </article>
       </section>
-      <section className='text-white'>
+      <section className='text-white' id="Portal-pdf">
         <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
           <img className='absolute w-full h-full object-cover rounded-lg' src='/img/newCourse.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
