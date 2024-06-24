@@ -101,9 +101,8 @@ function App() {
                     <Route path="/public-activities" element={<PublicActivities />}/>
                     <Route path="/public-committees" element={<PublicCommittee />}/>
                   </Routes>
-                }>
-                </Route>
-                <Route path='*' element={<Navigate to='/' />}/>
+                }/>
+                <Route path='*' element={<Navigate to='/' replace />}/>
               </Route>
             </Routes>
           </AnimatePresence>
