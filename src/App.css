@@ -3,12 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 /* global.css or app.css */
-/* .react-pdf_Page {
-    margin: 0 !important; 
-    padding: 0 !important; 
-    width: 100% !important; 
-    
-} */
 .visible {
     /* display: flex; */
     top: 0;
@@ -17,11 +11,9 @@
   }
   
   .hidden {
-    /* display: none; */
     top: -80px;
     transition: top 0.4s ease-out;
   }
-  /* src/global.css */
  .no-scroll {
   overflow: hidden;
   height: 100%;
