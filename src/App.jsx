@@ -22,6 +22,7 @@ function App() {
   const location = useLocation();
   const dragX = useMotionValue(0);
   const dragXMove = useMotionValue(0);
+  //in order to prevent any movment between routes while the pdf is open i dispaly this state in here and send it to the pages insted of implemending them inside the pages
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [isHatalMnifestActive, setIsHatalMnifestActive] = useState(false);
 
@@ -41,12 +42,10 @@ function App() {
     dragX.set(0)
   } else {
     dragX.set(latest)
-    // dragX.set(0)
-    // console.log(dragX.get())
   }
 
  })
-
+ //movemt between routs on slide and limit the amount of movment needed for the route navigation to work
  const handleDragEnd = (event, info) => {
   if (isPopupOpen) return;
 
@@ -60,17 +59,13 @@ function App() {
   }
   if (location.pathname === '/Mkeva' && dir === 'left' ) {
       navigate('/Atz');
-      // dragX.set(0); 
   } else if (location.pathname === '/Mkeva' && dir === 'right' ) {
       navigate('/');
-      // dragX.set(0); 
   } else {
       if (location.pathname === '/' && dir === 'left' ) {
           navigate('/Mkeva');
-          // dragX.set(0); 
       } else if (location.pathname === '/Atz' && dir === 'right' ) {
           navigate('/Mkeva');
-          // dragX.set(0); 
       }
   }
 };
