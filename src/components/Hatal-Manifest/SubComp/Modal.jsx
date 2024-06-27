@@ -4,18 +4,20 @@ import { Fragment, useState, useEffect } from "react"
 
 
 export default function Modal({ buttonText, title, children }) {
-  const LOCAL_STORAGE_KEY = "HATAL_MANIFEST_STATE"
+  // const LOCAL_STORAGE_KEY = "HATAL_MANIFEST_STATE"
 
-  const [isOpen, setIsOpen] = useState(() =>
-    JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY) || "true")
-  )
+  const [isOpen, setIsOpen] = useState(true)
+  //   JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY) || "true")
+  // )
+  // console.log(isOpen)
 
   const closeModal = () => setIsOpen(false)
   const openModal = () => setIsOpen(true)
 
-  useEffect(() => {
-    window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(isOpen))
-  }, [isOpen])
+  // useEffect(() => {
+  //   window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(isOpen))
+  //   console.log(isOpen)
+  // }, [isOpen])
 
   return (
     <>
