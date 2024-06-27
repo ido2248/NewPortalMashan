@@ -7,7 +7,7 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
   
   const [selectedPdf, setSelectedPdf] = useState(null)
   const [searchText, setSearchText] = useState("")
-  const file = ['pdf/crtisHever.pdf','pdf/mikum.pdf','pdf/horeLeAdamImMugblut.pdf','pdf/siyuaKlkle.pdf','pdf/mshretImBenMshpaha.pdf','pdf/meshrtyHArava.pdf','pdf/tosefetCspit.pdf',]
+  const file = ['pdf/crtisHever.pdf','pdf/mikum.pdf','pdf/horeLeAdamImMugblut.pdf','pdf/siyuaKlkle.pdf','pdf/mshretImBenMshpaha.pdf','pdf/meshrtyHArava.pdf',]
 
   const openPdf = (pdfPath) => {
     drag.set((0))
@@ -280,17 +280,6 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
             </div>
           </div>
           <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[5])}>לפתיחת הקובץ</button>
-          {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
-        </article>
-        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
-          <div className='flex flex-row items-center justify-center mb-1'>
-            <img className='h-[68px] w-[68px] m-2' src='/img/level.png'/>
-            <div className=' flex flex-col items-start'>
-              <h1 className='font-Katana text-[24px] font-bold text-start'>רמות פעילות</h1>
-              <p className='font-Assin text-[16px] text-start'>רמות פעילות ותוספות כספיות למשרתי קבע</p>
-            </div>
-          </div>
-          <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[6])}>לפתיחת הקובץ</button>
           {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
         </article>
       </section>
