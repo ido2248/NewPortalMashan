@@ -66,7 +66,7 @@ export default function Mkeva({ drag, isPopupOpen, setIsPopupOpen }) {
             <img className='h-[68px] w-[68px] m-2 ' src='/img/accounting.png'/>
             <div className=' flex flex-col items-start'>
               <h1 className='font-Katana text-[24px] font-bold text-start'>זכאות לפטור ממס</h1>
-              <p className='font-Assin text-[16px] text-start'>כניסה לאתר חבר בנודע למידע על זכאות לפטור ממס</p>
+              <p className='font-Assin text-[16px] text-start'>כניסה לאתר חבר בנוגע למידע על זכאות לפטור ממס</p>
             </div>
           </div>
           <Link className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.hvr.co.il/orders/signin.aspx?redirect=/site/pg/mcc_item_new%2C126211'>מעבר לאתר</Link>

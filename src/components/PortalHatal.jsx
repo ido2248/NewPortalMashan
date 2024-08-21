@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion'
 
 export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
-  const file = ['pdf/tash1.pdf','pdf/hatal_courses.pdf']
+  const file = ['pdf/tash1.pdf','pdf/hatal_courses.pdf','pdf/horaotBetihutLeovdayMisrad.pdf']
   const controlls = useAnimation()
   // const direction = info.offset.x ;
 
@@ -82,6 +82,15 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
             </div>
           </div>
         </article>
+        <article className=' mx-2 rounded-lg shadow-lg shadow-[#000000]/10 bg-white m-6 h-[279px] relative justify-center flex '>
+          <img className=' w-[238px] h-[170px] object-cover' src='/img/pikudHaoref.webp'/>
+          <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
+          <p className='text-[16px] p-2'>פיקוד בעורף כאן בשבילכם כל המידע הדרוש לבחירת מרחב מוגן</p>
+            <div className='flex justify-end'>
+              <Link className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' to='https://www.oref.org.il/heb/articles/info/preparing-protected-space/1200'>פיקוד העורף</Link>
+            </div>
+          </div>
+        </article>
       </section>
       <section className='text-white' id="Portal-pdf">
         <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
@@ -100,6 +109,16 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
             <p className='text-[16px] p-2'>מפקדים כל מה שאתם צריכים לדעת על חיילי ת"ש  זכויות </p>
             <div className='flex justify-end'>
               <button className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[0])}>ת"ש</button>
+              {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+            </div>
+          </div>
+        </article>
+        <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
+          <img className='absolute w-full h-full object-cover rounded-lg' src='/img/safetyFirst.jpg'/>
+          <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
+            <p className='text-[16px] p-2'>הוראות ותקנון בטיחות בשבילכם לנוחיותכם</p>
+            <div className='flex justify-end'>
+              <button className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[2])}>בטיחות</button>
               {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
             </div>
           </div>
