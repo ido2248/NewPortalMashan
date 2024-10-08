@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
-  const file = ['pdf/hatlmutPay.pdf','pdf/moedBhira2023.pdf','pdf/hopheshMerukaz2023.pdf']
+  const file = ['pdf/hatlmutPay.pdf','pdf/modeBhiraHupheshaMerukezet2024.pdf']
 
   const openPdf = (pdfPath) => {
     drag.set(0)
@@ -154,7 +154,7 @@ export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
           <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[1])}>לפתיחת הקובץ</button>
           {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
         </article>
-        <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
+        {/* <article className=' justify-end mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-3 h-[139px] relative p-2 flex flex-col items-end'>
           <div className='flex flex-row items-center justify-center mb-1'>
             <img className=' h-[68px] w-[68px] m-2' src='/img/summer.png'/>
             <div className=' flex flex-col items-start'>
@@ -164,7 +164,7 @@ export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
           </div>
           <button className=' text-[18px] text-white inline-block rounded-t rounded-b justify-center bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[2])}>לפתיחת הקובץ</button>
           {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
-        </article>
+        </article> */}
       </section>
     </motion.div>
   )
