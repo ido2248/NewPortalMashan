@@ -93,7 +93,7 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
         </article>
       </section>
       <section className='text-white' id="Portal-pdf">
-        <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
+        {/* <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
           <img className='absolute w-full h-full object-cover rounded-lg' src='/img/newCourse.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
           <p className='text-[16px] p-2'>כל המידע הנדרש על הקורסים וגמולות ההשתלמות</p>
@@ -102,7 +102,7 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
             {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
           </div>
           </div>
-        </article>
+        </article> */}
         <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
           <img className='absolute w-full h-full object-cover rounded-lg' src='/img/tash.jpg'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
