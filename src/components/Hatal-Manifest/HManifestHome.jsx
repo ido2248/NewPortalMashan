@@ -442,7 +442,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
                 <h4 className="text-center">זמני הארוחות בחט"ל</h4>
                 <div>
                   <span className="font-Katana text-[22px] text-[#432DC9]">ארוחת בוקר: </span>
-                  <p className=" font-Assin text-[16px]">ע"ב ארוזיות: 06:00 עד 07:00 (לתורנים ושומרים).</p>
+                  <p className=" font-Assin text-[16px]">ע"ב כריכים: 07:00 עד 08:00 (לשומרים בלבד).</p>
                 </div>
                 <div>
                   <span className="font-Katana text-[22px] text-[#432DC9]">ארוחת צהרים:</span>
@@ -459,9 +459,9 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
                 first
                 last
               >
-                <p className="text-center">חייל חדש המגיע ליחידה זכאי ל"חודש הסתגלות" שבו אינו משובץ בתורנויות. חייל מבצע בממוצע 2 תורנויות בחודש של שמירה ביום חולת ושמירה בסוף השבוע 
+                <p className="text-center">חייל חדש המגיע ליחידה זכאי ל"חודש הסתגלות" שבו אינו משובץ בתורנויות. חייל מבצע בממוצע תורנות חמ"ל בחודש ביום חול תורנות חמ"ל סופ"ש 
                   (חמישי עד ראשון) 
-                  אחת ל-12 שבועות
+                  אחת לרבעון
                 </p>
                 <br/>
                 <p className="text-center">* אנשי קבע יוכלו לקבל פרוט אצל ק. אבטחה.</p>
@@ -532,9 +532,9 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
                 last
               >
                 <p className="text-center">
-                  ביחידה פועלת שק"מית הממוקמת בסמוך לחדר האוכל. השק"מית פועלת בימי א' עד ה' בשעות:
+                  ביחידה פועלת כוורת בסמוך לחדר האוכל. הכוורת פילה בימי א' עד ה' בשעות:
                 </p>
-                <p className="text-center">
+                <p className="text-center font-bold">
                   08:00 עד 11:00. <br />
                   11:40 עד 15:45.
                 </p>
@@ -580,11 +580,11 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
               >
                 <p className=" text-center">
                   אפסנאות היחידה נותנת שירות בנושא ניפוק ציוד צבאי, מדי ב', ציוד הלבשה והנעלה, כביסה
-                  וכו'. (פרוט זכויות לוגיסטיות לפרט, ניתן לראות בפורטל חט"ל מחלקת תו"ב, ענף מאו"ן).
+                  וכו'. (פרוט זכויות לוגיסטיות לפרט, ניתן לראות בפורטל חט"ל מחלקת המשקים והמטה, מפקדת מחנה).
                 </p>
                 <br />
                 <p className=" text-center">
-                  שעות פעילות מחסן פרט 08:00 עד 17:00. <br /> שעות פעילות הנשקייה 08:00 עד 16:00.
+                  שעות פעילות מחסן פרט 08:30 עד 12:00 ו-13:00 עד 16:30.
                 </p>
               </Drawer>
               <Drawer
@@ -603,7 +603,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
               </Drawer>
               <Drawer
                 title="מסדרים"
-                image='/img/misdar.png'
+                image='/img/misdarim.png'
                 first
                 last
               >
