@@ -608,7 +608,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
                 last
               >
                 <p className=" text-center">
-                  בכל יום חמישי מתקיים מסדר לחיילי החובה במגרש המסדרים. שעת המסדר הינה 09:00.
+                  מתקיים בימים שני וחמישי מסדר לחיילי החובה במגרש המסדרים בשעה 09:00.
                 </p>
               </Drawer>
               <Drawer
