@@ -32,7 +32,7 @@ export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
   })
 },[])
   return (
-    <motion.div dir='rtl' className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[160px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:100, opacity:0, transition:{duration:0.2}}} >
+    <motion.div dir='rtl' className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[120px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:100, opacity:0, transition:{duration:0.2}}} >
       <div className=' text-[24px] font-Katana text-[#432DC9]'>אזרחים עובדי צה"ל היקרים</div>
       <div className='text-[16px]  font-Assin'>לפניכם מגוון רחב של מידע בנושאים שונים</div>
       <div className='text-[16px]  font-Assin'>המטרה להנגיש עבורכם את המידע והפעולות השונות</div>

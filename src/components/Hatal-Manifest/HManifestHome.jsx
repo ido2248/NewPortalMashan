@@ -397,7 +397,7 @@ export default function HManifestHome({ drag, isPopupOpen, setIsPopupOpen }) {
         })
       },[])
   return (
-    <div className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[120px]'>
+    <div className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[80px]'>
       <section
           id="welcome"
           className="mx-auto flex flex-col"
