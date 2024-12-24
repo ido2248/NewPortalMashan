@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion'
 
 export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
-  const file = ['1CbmvPe5oEKb9xxwJiwDmS9bQTJCo9e5V','pdf/hatal_courses.pdf','1X00JYRlM3WmNpGDsOEx3fjfPXskA4dog']
+  const file = ['1CbmvPe5oEKb9xxwJiwDmS9bQTJCo9e5V','pdf/hatal_courses.pdf','pdf/horaotBetihutLeovdayMisrad.pdf']
   const controlls = useAnimation()
   // const direction = info.offset.x ;
 
