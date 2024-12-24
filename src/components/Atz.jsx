@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Atz({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
-  const file = ['pdf/hatlmutPay.pdf','pdf/modeBhiraHupheshaMerukezet2024.pdf']
+  const file = ['pdf/hatlmutPay.pdf','pdf/modeBhiraHupheshaMerukezet2025.pdf']
 
   const openPdf = (pdfPath) => {
     drag.set(0)
