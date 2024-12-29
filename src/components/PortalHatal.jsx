@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion'
 
 export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
-  const file = ['1CbmvPe5oEKb9xxwJiwDmS9bQTJCo9e5V','pdf/hatal_courses.pdf','pdf/horaotBetihutLeovdayMisrad.pdf']
+  const file = ['1CbmvPe5oEKb9xxwJiwDmS9bQTJCo9e5V','pdf/hatal_courses.pdf','pdf/horaotBetihutLeovdayMisrad.pdf','pdf/masegetzhuyotkeva.pdf']
   const controlls = useAnimation()
   // const direction = info.offset.x ;
 
@@ -123,6 +123,16 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
             <p className='text-[16px] p-2'>הוראות ותקנון בטיחות בשבילכם לנוחיותכם</p>
             <div className='flex justify-end'>
               <button className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[2])}>בטיחות</button>
+              {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
+            </div>
+          </div>
+        </article>
+        <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative'>
+          <img className='absolute w-full h-full object-cover rounded-lg' src='/img/kevazhuyot.jpg'/>
+          <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full'>
+            <p className='text-[16px] p-2'>מידע על כל הזכויות הניתנות לחיילי קבע</p>
+            <div className='flex justify-end'>
+              <button className='text-[18px] rounded-lg bg-[#432DC9] p-[6px] font-Katana px-[25px]' onClick={()=> openPdf(file[3])}>זכוניות קבע</button>
               {isPopupOpen && <PopUpPdf isOpen={isPopupOpen} onClose={()=> setIsPopupOpen(false)} pdf={selectedPdf}/>}
             </div>
           </div>
