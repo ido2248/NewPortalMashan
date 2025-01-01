@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import PopUpPdf from './PopUpPdf'
 import { motion, useAnimation } from 'framer-motion'
+import Drawer from "./Hatal-Manifest/SubComp/Drawer"
 
 export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
   const [selectedPdf, setSelectedPdf] = useState(null)
@@ -32,6 +33,24 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
       <br/>
       <div className=' text-[16px] font-Assin'>המטרה להנגיש עבודרכם את המידע והפעולות השונות</div>
       <section className='text-white' id="Portal">
+        <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative justify-center flex '>
+          <img className='absolute w-250px] h-[165px] object-cover mt-7' src='/img/we-work.png'/>
+          <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full '>
+            <p className='text-[16px] p-2'>מתחמי עבודה משותפים</p>
+            <div className='flex justify-end'>
+              <Drawer
+                title="מידע"
+                image='https://drive.google.com/thumbnail?export=view&id=1MEBzX8AhI96OxIl44DBiaGP2SodE1kAt'
+                first
+                last
+              >
+                <p className=" text-center">
+                  בקרוב יהיה תוכן...
+                </p>
+              </Drawer>
+            </div>
+          </div>
+        </article>
         <article className='mx-2 rounded-lg shadow-lg shadow-[#000000]/10 m-6 h-[279px] relative justify-center flex '>
           <img className='absolute w-[185px] h-[165px] object-cover' src='/img/cadic.png'/>
           <div className='bg-black/40 font-Assin rounded-b-lg p-2 absolute bottom-0 w-full '>

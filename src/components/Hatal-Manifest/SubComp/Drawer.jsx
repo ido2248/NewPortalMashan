@@ -23,7 +23,7 @@ function Drawer({ title, onClose, children, open }) {
     >
       <Dialog
         as="div"
-        className="relative z-30"
+        className="relative z-40"
         onClose={onClose}
       >
         <Transition.Child
