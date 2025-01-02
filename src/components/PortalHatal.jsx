@@ -24,7 +24,7 @@ export default function PortalHatal({ drag, isPopupOpen, setIsPopupOpen }) {
 
   return (
     <motion.div className='text-center from-[#FFFFFF] to-[#F5F5F5] flex-1 container  px-4 pt-[120px]' initial={{ opacity:0}} animate={{opacity:1}} exit={{ x:-100, opacity:0, transition:{duration:0.2}}}>
-      <div className='mx-2 m-2 h-[220px] relative justify-center flex bg-red-100 '>
+      <div className='mx-2 m-2 h-[220px] relative justify-center flex from-[#FFFFFF] to-[#F5F5F5]'>
       <img className='absolute object-cover' src='https://drive.google.com/thumbnail?export=view&id=1MEBzX8AhI96OxIl44DBiaGP2SodE1kAt'/>
       {/* <img className='absolute object-cover' src='https://imgloadblob.blob.core.windows.net/imgtest/hatalsym.png'/> */}
       </div>
